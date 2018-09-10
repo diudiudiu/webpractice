@@ -1,0 +1,165 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	font-size:16px;
+	font-family:"微软雅黑";
+}
+#box{
+	height:270px;
+	width:430px;
+	top:200px;
+	left:300px;
+	position: absolute;
+    border: 1px solid #ccc;
+    background: #f6f6f6;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+#top{
+	height:50px;
+	width:180px;
+	margin:0px auto;
+	background:url(../images/login_window_logo.png) no-repeat -200px 0;
+    margin-top: 10px;
+	cursor: move;
+}
+#close{
+	width:28px;
+	height:28px;
+	position:absolute;
+	top:-10px;
+	right:-10px;
+	cursor:pointer;
+	background: url(../images/boxy_btn.png) no-repeat;
+	z-index:1
+}
+.sign-input{
+	height:40px;
+	width:300px;
+	line-height:40px;
+	margin:10px auto;
+	text-align:center;
+}
+.sign-input span{
+	font-size:17px;
+	font-weight:bolder;
+}
+input{
+	width:170px;
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+	outline:none;
+	color:#868686;
+	border:1px solid #ccc;
+	font-size:18px;
+}
+input:focus{
+	color:#000;
+}
+#bottom{
+	margin-top:20px;
+}
+.btn{
+	height:30px;
+	width:110px;
+	background:url(../images/login_btn.png) no-repeat -112px -3px;
+	float:left;
+	margin-left:100px;
+}
+loginState{
+	cursor: pointer;
+}
+trigger{
+	 
+     display: block;
+     float: left;
+     height: 16px;
+     overflow: hidden;
+     width: 120px;
+     margin: 10px 0 0 20px;
+}
+.show{
+	float: left;
+	height: 14px;
+    overflow: hidden;  
+    width: 14px;
+    margin: 8px 0 0 50px;
+	cursor: pointer;
+}
+.down{
+	background: url(../images/ptlogin.png) no-repeat 0 -22px;
+	height:10px;
+	width:10px;
+	float:left;
+	margin-left:10px;
+	margin-top:11px;
+	cursor: pointer;
+}
+.txt{
+    float: left;
+    margin-left:5px;
+	margin-top:6px;
+    font-size: 12px;
+    >line-height:18px!important;
+	cursor: pointer;
+}
+.statePanel{
+    display:none;
+	position: absolute;
+	right: 90px;
+	top: 193px;
+	z-index: 10;
+	margin: 0;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #ccc #6a6a6a #666 #cdcdcd;
+	padding: 0;
+	width: 100px;
+	height: 133px;
+	overflow: hidden;
+	background: white;
+	font-size: 12px;
+	line-height: 1.5;
+}
+.statePanel .statePanel_li {
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 3px 0;
+	width: 100px;
+	height: 16px;
+	line-height: 16px;
+	overflow: hidden;
+	cursor: pointer;
+}
+.stateSelect_icon {
+	float: left;
+	margin: 2px 0 0 5px;
+	width: 14px;
+	height: 14px;
+	overflow: hidden;
+}
+.stateSelect_text {
+    margin: 0 0 0 22px;
+}
+.login-state .callme {
+    background: url(../images/ptlogin.png) -72px 0 no-repeat;
+}
+.login-state .online {
+    background: url(../images/ptlogin.png) 0 0 no-repeat;
+}
+.login-state .away {
+    background: url(../images/ptlogin.png) -18px 0 no-repeat;
+}
+.login-state .busy {
+    background: url(../images/ptlogin.png) -36px 0 no-repeat;
+}
+.login-state .silent {
+    background: url(../images/ptlogin.png) -108px 0 no-repeat;
+}
+.login-state .hidden {
+	background: url(../images/ptlogin.png) -54px 0 no-repeat;
+}
