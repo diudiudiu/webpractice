@@ -1,0 +1,129 @@
+@charset "utf-8";
+/* CSS Document */
+html{
+	width:100%;
+}
+.bg{
+	height:1000px;
+	background:#C93;
+	z-index:3;
+}
+#in{
+	font-size:100px;
+}
+.black{
+	background:#333;
+	opacity:0.5;
+	filter:alpha(opacity=50);
+	position:absolute;
+	left:0;
+	top:0;
+	display:none;
+	height:100%;
+	width:100%;
+}
+.step{
+	position:relative;
+	height:800px;
+	width:600px;
+	background:#F00;
+}
+.step li{
+	position:absolute;
+}
+.step li a{
+	position:absolute;
+	width:96px;
+	height:32px;
+	cursor:pointer;
+	font-size:24px;
+	color:#fff;
+}
+.step li span{
+	position:absolute;
+	width:50px;
+	height:32px;
+	cursor:pointer;
+	font-size:24px;
+	color:#fff;
+}
+.step1{
+	background:#366;
+	height:100px;
+	width:400px;
+	top:0px;
+	left:0px;
+	display:none;
+}
+.step1 a{
+	top:50px;
+	left:50px; 
+}
+.step1 span{
+	top:70px;
+	right:150px; 
+}
+.step2{
+	background:#366;
+	height:100px;
+	width:250px;
+	top:130px;
+	left:0px;
+	display:none;
+}
+.step2 a{
+	top:50px;
+	left:50px; 
+}
+.step2 span{
+	top:70px;
+	right:150px; 
+}
+.step3{
+	background:#366;
+	height:100px;
+	width:300px;
+	top:260px;
+	left:0px;
+	display:none;
+}
+.step3 a{
+	top:50px;
+	left:50px; 
+}
+.step3 span{
+	top:70px;
+	right:150px; 
+}
+.step4{
+	background:#366;
+	height:100px;
+	width:350px;
+	top:390px;
+	left:0px;
+	display:none;
+}
+.step4 a{
+	top:50px;
+	left:50px; 
+}
+.step4 span{
+	top:70px;
+	right:150px; 
+}
+.step5{
+	background:#366;
+	height:100px;
+	width:400px;
+	top:520px;
+	left:0px;
+	display:none;
+}
+.step5 a{
+	top:50px;
+	left:50px; 
+}
+.step5 span{
+	top:70px;
+	right:150px; 
+}
