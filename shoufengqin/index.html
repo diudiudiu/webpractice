@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<style>
+.box{
+	width:1024px;
+	margin:0 auto;
+}
+.nav{
+	height:0px;
+	position:relative;
+	overflow:hidden;
+}
+.nav .sp img{
+	display:none;
+	height:100px;
+	z-index:1;
+	width:1024px;
+}
+.nav .sp span{
+	background:url(images/cha.png) no-repeat -115px -110px;
+	position:absolute;
+	display:block;
+	right:5px;
+	top:5px;
+	height:30px;
+	width:30px;
+	z-index:4;
+}
+.nav .bp img{
+	display:block;
+	z-index:1;
+	height:400px;
+	width:1024px;
+}
+</style>
+<body>
+<div class="box">
+	<div id="nav" class="nav">
+		<a class="sp" href="#"><img id="st" src="images/spic.png" /> <span id="close"></span></a>
+		<a class="bp" href="#"><img id="bt" src="images/bpic.png" /></a>
+	</div>
+</div>
+</body><script type="text/javascript" src="js/script.js"></script>
+</html>
