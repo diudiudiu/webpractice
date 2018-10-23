@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<style type="text/css">
+*{
+	margin:0;
+	padding:0;
+}
+.box{
+	height:900px;
+	position:relative;
+}
+.box .small{
+	height:260px;
+	width:380px;
+	margin:20px;
+	border:1px solid #999;
+	cursor:move;
+	float:left;
+	z-index:1;
+}
+.box .big{
+	height:250px;
+	width:250px;
+	overflow:hidden;
+	position:absolute;
+	left:450px;
+	top:20PX;
+	border:1px solid #999;	
+	display:block;
+}
+.box .big img{
+	position:absolute;
+	z-index:5;
+}
+#move{
+	display:none;
+	position:absolute;
+	height:100px;
+	width:100px;
+	border:1px solid #6CF;
+	background:#E3F3FF;
+	filter:alpha(opacity=50);
+	opacity:0.5;
+}
+
+</style>
+<script type="text/javascript">
+window.onload=function(){
+	var spic=document.getElementById('spic');
+	var bpic=document.getElementById('bpic');
+	var move=document.getElementById('move');
+	var box=document.getElementById('box');
+	var bimg=bpic.getElementsByTagName('img')[0];
+	spic.onmouseover=function(){
+		move.style.display="block";
+	}
+	spic.onmousemove=function(ev){
+		var event=ev || window.event;
+		var left=event.clientX-box.offsetLeft-spic.offsetLeft-move.offsetWidth/2;
+		var top=event.clientY-box.offsetTop-spic.offsetTop-move.offsetHeight/2;
+		if(left<20){
+			left=20;
+		}else if(left>(spic.offsetWidth-move.offsetWidth+20)){
+			left=spic.offsetWidth-move.offsetWidth+20;
+		}
+		if(top<20){
+			top=20;
+		}else if(top>(spic.offsetHeight-move.offsetHeight+20)){
+			top=spic.offsetHeight-move.offsetHeight+20;
+		}
+		move.style.left = left + "px";   //oSmall.offsetLeft的值是相对什么而言
+        move.style.top = top + "px";
+
+        var percentX = left / (spic.offsetWidth - move.offsetWidth);
+        var percentY = top / (spic.offsetHeight - move.offsetHeight);
+        bimg.style.left = -percentX * (bimg.offsetWidth - bpic.offsetWidth) + "px";
+        bimg.style.top = -percentY * (bimg.offsetHeight - bpic.offsetHeight) + "px";
+	}
+	spic.onmouseout=function(){
+		move.style.display="none";
+	}
+}
+</script>
+<body>
+<div id='box' class="box">
+	<div id="spic" class="small">
+		<div id="move"></div>
+		<img src="images/small.png" />	
+	</div>
+	<div id="bpic" class="big">
+		<img src="images/big.png"/>	
+	</div>
+</div>
+</body>
+</html>
