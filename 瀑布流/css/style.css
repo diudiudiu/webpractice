@@ -1,0 +1,21 @@
+/* CSS Document */
+.box{
+	position:relative;
+	margin:0 auto;
+}
+.out{
+	padding:15px 0 0 15px;
+	float:left;
+}
+.border{
+	border:1px solid #CCC;
+	border-radius:5px;
+	box-shadow:0 0 5px #ccc;
+	
+}
+.border img{
+	width:150px;
+	height:auto;
+	padding:15px;
+}
+
