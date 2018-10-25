@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>超级课程表</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="css/public-clear.css"/>
+</head>
+
+<body>
+<div class="box">
+	<div id="divselect">
+      <cite id="week">第一周</cite>
+      <ul>
+         <li id="li"><a href="javascript:;" selectid="1">第一周</a></li>
+         <li><a href="javascript:;" selectid="2">第二周</a></li>
+         <li><a href="javascript:;" selectid="3">第三周</a></li>
+         <li><a href="javascript:;" selectid="4">第四周</a></li>
+         <li><a href="javascript:;" selectid="5">第五周</a></li>
+      </ul>
+    </div>
+	<div class="table">
+		<div class="nav">
+			<dt>
+				<dl class="week">
+					<dd><a href="#">星期一</a></dd>
+					<dd><a href="#">星期二</a></dd>
+					<dd><a href="#">星期三</a></dd>
+					<dd><a href="#">星期四</a></dd>
+					<dd><a href="#">星期五</a></dd>
+					<dd><a href="#">星期六</a></dd>
+					<dd><a href="#">星期七</a></dd>
+				</dl>
+			</dt>
+		</div>
+		<div>
+			<dt>
+				<dl class="class">
+					<dd><a href="#">1 2</a></dd>
+					<dd><a href="#">3 4</a></dd>
+					<dd><a href="#">5 6</a></dd>
+					<dd><a href="#">7 8</a></dd>
+					<dd><a href="#">9 10</a></dd>
+				</dl>
+			</dt>
+		</div>
+	</div>
+	<div id="mask">
+		<div id="on" class="on">
+			<span class="close">×</span>
+			<label id="cname"></label>
+			<label id="croom"></label>
+			<label id="cteacher"></label>
+			<label id="noweek">非本周课</label>
+		</div>
+		<div id="nul" class="nul">
+			<span class="close">×</span>
+			<label>课程：</label>
+			<input id="cinname" type="text" value="请输入课程名称" onfocus="if(value=='请输入课程名称'){value=''}" onblur="if(value==''){value='请输入课程名称'}" />
+			<label>老师：</label>
+			<input id="cinteacher" type="text" value="请输入教师姓名" onfocus="if(value=='请输入教师姓名'){value=''}" onblur="if(value==''){value='请输入教师姓名'}" />
+			<label>教室：</label>
+			<input id="cinroom" type="text" value="请输入上课教室" onfocus="if(value=='请输入上课教室'){value=''}" onblur="if(value==''){value='请输入上课教室'}" />
+			<input id="add" type="button" value="确定" />
+		</div>
+	</div>
+	<div id="list" class="list">
+		<div id="cla1" class="li">
+			<div id="cla1.1"></div>
+			<div id="cla1.2"></div>
+			<div id="cla1.3"></div>
+			<div id="cla1.4"></div>
+			<div id="cla1.5"></div>
+			<div id="cla1.6"></div>
+			<div id="cla1.7"></div>
+		</div>
+		<div id="cla2" class="li">
+			<div id="cla2.1"></div>
+			<div id="cla2.2"></div>
+			<div id="cla2.3"></div>
+			<div id="cla2.4"></div>
+			<div id="cla2.5"></div>
+			<div id="cla2.6"></div>
+			<div id="cla2.7"></div>
+		</div>
+		<div id="cla3" class="li">
+			<div id="cla3.1"></div>
+			<div id="cla3.2"></div>
+			<div id="cla3.3"></div>
+			<div id="cla3.4"></div>
+			<div id="cla3.5"></div>
+			<div id="cla3.6"></div>
+			<div id="cla3.7"></div>
+		</div>
+		<div id="cla4" class="li">
+			<div id="cla4.1"></div>
+			<div id="cla4.2"></div>
+			<div id="cla4.3"></div>
+			<div id="cla4.4"></div>
+			<div id="cla4.5"></div>
+			<div id="cla4.6"></div>
+			<div id="cla4.7"></div>
+		</div>
+		<div id="cla5" class="li">
+			<div id="cla5.1"></div>
+			<div id="cla5.2"></div>
+			<div id="cla5.3"></div>
+			<div id="cla5.4"></div>
+			<div id="cla5.5"></div>
+			<div id="cla5.6"></div>
+			<div id="cla5.7"></div>
+		</div>
+		
+		
+	</div>
+</div>
+</body>
+<script type="text/javascript" src="js/script.js"></script>
+</html>
