@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>会员注册表单</title>
+<style type="text/css">
+	table{
+		width: 400px;
+		margin: 0 auto;
+		border: 1px solid #000;
+		border-collapse: collapse;
+		font-size: 13px;
+	}
+</style>
+</head>
+<body>
+	<form name="form1" method="post" action="success.html">
+		<table border="1">
+			<tr>
+				<td colspan="3">
+					<img src="images/header.jpg" style="width: 400px; margin: 0 auto">
+				</td>
+			</tr>
+			<tr>
+				<td height="32" colspan="3">旅游网会员注册</td>
+			</tr>
+			<tr>
+				<td width="80">用户名</td>
+				<td width="250"><input type="text" name="myname" autofocus required></td>
+				<td width="55">html5新增</td>
+			</tr>
+			<tr>
+				<td>密码：</td>
+				<td><input type="password" name="mypassword"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>确认密码：</td>
+				<td><input type="password" name="mypassword"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>性别</td>
+				<td>
+					<input type="radio" name="rad" value="rad1">男
+					<input type="radio" name="rad" value="rad2">女
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Emali：</td>
+				<td><input type="emali" name="myemail" required ></td>
+				<td>html5新增</td>
+			</tr>
+			<tr>
+				<td>年龄：</td>
+				<td><input type="number" name="myage" max=28 min=16></td>
+				<td>html5新增</td>
+			</tr>
+			<tr>
+				<td>专业：</td>
+				<td>
+					<input type="text" list="alist" name="mydepartment" placeholder="maths">
+					<datalist id="alist">
+						<option value="computer"></option>
+						<option value="physics"></option>
+						<option value="chinese"></option>
+						<option value="Maths"></option>
+					</datalist>
+				</td>
+				<td>html5新增</td>
+			</tr>
+			<tr>
+				<td>出生日期：</td>
+				<td><input type="date" name="birthdate"></td>
+				<td>html5新增</td>
+			</tr>
+			<tr>
+				<td>周数：</td>
+				<td><input type="week" name="myweek"></td>
+				<td>html5新增</td>
+			</tr>
+			<tr>
+				<td>你选择的颜色：</td>
+				<td><input type="color" name="mycolor"></td>
+				<td>html5新增</td>
+			</tr>
+			<tr>
+				<td>英语等级：</td>
+				<td>
+					<input type="range" name="rank" max=8 min=2 step=2 value="2" onchange="showr.value=value">
+					<output id="showr">4</output>级
+				</td>
+				<td>html5新增</td>
+			</tr>
+				<!-- html4 -->
+			<tr>
+				<td>爱好：</td>
+				<td>
+					<input type="checkbox" name="check1" value="sport">户外
+					<input type="checkbox" name="check2" value="voice">音乐
+					<input type="checkbox" name="check1" value="movie">购物
+					<input type="checkbox" name="check1" value="shopping">其它
+
+
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>所在地：</td>
+				<td>
+					<select name="menu2" size="">
+						<option value="2">北京</option>
+						<option value="3">上海</option>
+						<option value="4">大连</option>
+						<option value="5">其它</option>
+					</select>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>备注：</td>
+				<td>
+					<textarea name="texta" rows="3" cols="30" wrap="" id=""></textarea>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><input type="submit" name="sub" value="提交"></td>
+				<td><input type="reset" name="reset" value="重置"></td>
+				<td></td>
+			</tr>
+			<tr>
+			<td><label for myfile>请多重选择文件：</label></td>
+			<td><input type="file" id="myfile" multiple form="myform" /></td>
+			<td></td>		
+			</tr>
+		</table>
+</body>
+</html>
