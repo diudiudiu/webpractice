@@ -1,0 +1,100 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?wt73gp');
+  src:  url('fonts/icomoon.eot?wt73gp#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?wt73gp') format('truetype'),
+    url('fonts/icomoon.woff?wt73gp') format('woff'),
+    url('fonts/icomoon.svg?wt73gp#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* icon */
+.icon-images:before {
+  content: "\e90e";
+}
+.icon-books:before {
+  content: "\e920";
+}
+.icon-stack:before {
+  content: "\e92e";
+}
+.icon-laptop:before {
+  content: "\e957";
+}
+.icon-stats-dots:before {
+  content: "\e99b";
+}
+.icon-download2:before {
+  content: "\e9c5";
+}
+.icon-sphere:before {
+  content: "\e9c9";
+}
+/* body */
+.box{
+  height: 1000px;
+  margin: 0 auto;
+  background: url(../images/bgp.jpg) no-repeat;
+  background-size:100% 100%;
+  color: #fff;
+}
+.box .nav{
+  height: 150px;
+  margin: 0 auto;
+  width: 800px;
+  padding-top: 90px;
+}
+.box .nav h2{
+  font-size: 24px;
+  font-weight: bolder;
+}
+.box .nav p{
+  padding-right: 70px;
+  text-indent: 2em;
+}
+.box .bar{
+  width:950px;
+  margin: 0 auto;
+}
+.box .bar .list{
+  height: 110px;
+  width: 200px;
+  text-align: center;
+  border:1px solid #999;
+  padding-bottom: 10px;
+  float: left;
+  margin:40px;
+  cursor: pointer;
+  transition:1s;
+  -moz-transition:1s;  /* Firefox 4 */
+  -webkit-transition:1s; /* Safari 和 Chrome */
+  -o-transition:1s;  /* Opera */
+}
+.box .bar .list i{
+  font-size: 52px;
+  display: block;
+  margin-bottom: 20px;
+  margin-top:10px;
+}
+.box .bar .list:hover{
+-webkit-box-shadow: 0 1px 4px rgba(255, 255, 255, 0.3), 0px 0px 40px rgba(255, 255, 255, 0.25) inset;
+-moz-box-shadow: 0 1px 4px rgba(255, 255, 255, 0.3), 0px 0px 40px rgba(255, 255, 255, 0.25) inset;
+-ms-box-shadow: 0 1px 4px rgba(255, 255, 255, 0.3), 0px 0px 40px rgba(255, 255, 255, 0.25) inset;
+-o-box-shadow: 0 1px 4px rgba(255, 255, 255, 0.3), 0px 0px 40px rgba(255, 255, 255, 0.25) inset;
+box-shadow: 0px 1px 4px rgba(255, 255, 255, 0.3), 0px 0px 40px rgba(255, 255, 255, 0.25) inset;
+}
