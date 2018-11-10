@@ -46,8 +46,11 @@
   content: "\e9c9";
 }
 /* body */
+html,body{
+  height: 100%;
+}
 .box{
-  height: 1000px;
+  height:100% ;
   margin: 0 auto;
   background: url(../images/bgp.jpg) no-repeat;
   background-size:100% 100%;
@@ -70,6 +73,7 @@
 .box .bar{
   width:950px;
   margin: 0 auto;
+
 }
 .box .bar .list{
   height: 110px;
@@ -80,10 +84,10 @@
   float: left;
   margin:40px;
   cursor: pointer;
-  transition:1s;
-  -moz-transition:1s;  /* Firefox 4 */
-  -webkit-transition:1s; /* Safari 和 Chrome */
-  -o-transition:1s;  /* Opera */
+  transition:all 0.7s;
+  -moz-transition:all 0.7s;  /* Firefox 4 */
+  -webkit-transition:all 0.7s; /* Safari 和 Chrome */
+  -o-transition:all 0.7s;  /* Opera */
 }
 .box .bar .list i{
   font-size: 52px;

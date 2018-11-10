@@ -1,0 +1,74 @@
+#box{
+	margin: 0 auto;
+
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+.hide{
+	display: none;
+}
+#box .left-nav{
+	float: left;
+	border:1px solid #000;
+	margin: 10px 20px;
+}
+#box .left-nav h2{
+	margin: 5px 20px;
+	height: 30px;
+	line-height: 30px;
+	font-weight: bold;
+}
+#box .left-nav ul li{
+	height: 30px;
+	line-height: 35px;
+	margin: 5px 10px;
+	width: 370px;
+	list-style: none;
+	border-top:1px solid #000;
+	text-indent: 20px;
+}
+#box .left-nav a:hover{
+	color: red;
+}
+#box .left-nav ul .end{
+	border-bottom: 1px solid #000;
+	padding-bottom: 5px;
+	margin-bottom: 0px;
+}
+#box .left-nav p{
+	float: right;
+	margin-right: 30px;
+	height: 30px;
+	line-height: 30px;
+	cursor: pointer;
+}
+#box .right-nav{
+	float: right;
+	margin: 10px 100px 10px 0;
+	width: 1350px;
+}
+#box .right-nav .list{
+	border: 1px solid #000;
+	
+}
+#box .right-nav .list h2{
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	font-weight: bold;
+	margin-top: 30px;
+	font-size: 28px;
+}
+#box .right-nav .list p{
+	text-indent: 2em;
+	padding: 30px;
+	line-height: 30px;
+}
+#box .right-nav .list span{
+	float: right;
+	margin-right: 30px;
+	color: red;
+	cursor: pointer;
+}
