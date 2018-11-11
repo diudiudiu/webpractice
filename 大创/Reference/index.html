@@ -9,49 +9,118 @@
 </head>
 <body>
 	<div id="box">
-		<div class="left-nav">
+		<div class="logo">
+			
+		</div>
+		<div class="left-nav" id="left-nav">
 			<h2>目录</h2>
 			<ul id="book">
-				<li class="books"><a href="">基于三维结构张量的图像模糊度评价方法</a></li>
-				<li class="books"><a href="">基于深度学习模型的图像质量评价方法</a></li>
-				<li class="books"><a href="">基于稀疏表示的图像模糊度评价方法</a></li>
-				<li class="books"><a href="">基于最强方向梯度的图像模糊度评价方法</li></a>
-				<li class="books"><a href="">结合稀疏表示和概率潜在语义的图像模糊度评价</a></li>
-				<li class="books"><a href="">卷积神经网络研究综述</a></li>
-				<li class="books"><a href="">深度学习研究综述</a></li>
-				<li class="books end"><a href="">图像理解中的卷积神经网络</a></li>
-				<li class="books hide"><a href="">图像模糊度评价研究</a></li>
-				<li class="books hide"><a href="">图像模糊复原及质量评价算法研究</a></li><li class="books hide"><a href="">无参考图像模糊度评价方法研究</a></li>
+				<li class="books"><a href="#book1">基于三维结构张量的图像模糊度评价方法</a></li>
+				<li class="books"><a href="#book2">基于深度学习模型的图像质量评价方法</a></li>
+				<li class="books"><a href="#book3">基于稀疏表示的图像模糊度评价方法</a></li>
+				<li class="books"><a href="#book4">基于最强方向梯度的图像模糊度评价方法</li></a>
+				<li class="books"><a href="#book5">结合稀疏表示和概率潜在语义的图像模糊度评价</a></li>
+				<li class="books"><a href="#book6">卷积神经网络研究综述</a></li>
+				<li class="books"><a href="#book7">深度学习研究综述</a></li>
+				<li class="books end"><a href="#book8">图像理解中的卷积神经网络</a></li>
+				<li class="books hide"><a href="#book9">图像模糊度评价研究</a></li>
+				<li class="books hide"><a href="#book10">图像模糊复原及质量评价算法研究</a></li>
+				<li class="books hide"><a href="#book11">无参考图像模糊度评价方法研究</a></li>
 			</ul>	
 			<p id="more" class="">更多</p>
 			<p id="on" class="hide">收起</p>
 		</div>
 		<div class="right-nav">
-			<div class="list">
+			
+			<h1>参考文献</h1>
+			<div class="list" id="book1">
 				<h2>基于三维结构张量的图像模糊度评价方法</h2>
+				<h3>张  涛,梁德群,王新年,刘丽娟</h3>
 				<p>
 					根据图像二维结构张量的特性和清晰图像及其模糊副本之间存在较大差异的特点,构造单幅图像的三维结构张量,其特征值大小反映了图像的局部几何结构信息,并与图像的清晰度有关,据此提出基于三维结构张量的图像模糊度评价方法。对输入图像进行不同尺度的低通滤波,得到输入图像的2个副本,并将其分成互不重叠的块。通过计算各块的三维结构张量得到模糊度参数,将各块的模糊度参数和关注度系数加权得到整幅图像的模糊度参数,以模糊度参数的指数函数形式计算图像的模糊度。实验结果表明，该方法计算出的模糊度相对于图像的模糊程度是单调的,具有良好的抗噪性,并且符合人眼视觉系统特性。
 					<span>详情</span>
 				</p>
 			</div>
-			<!-- <div class="list">
-				<h2></h2>
+			<div class="list" id="book2">
+				<h2>基于深度学习模型的图像质量评价方法</h2>
+				<h3>李琳，余胜生</h3>
 				<p>
-					
+					为了有效提取与视觉感知质量高度相关的图像特征， 改进图像质量评价方法，在深度学习的框架下， 提 出一个全新的卷积神经网络ＩＱ Ｆ -Ｃ Ｎ Ｎ结构， 能自动学习判别性更强的图像质量特征， 并利用学习的特征进 行图像质量评价． 同时， 该算法采用局部亮度系数归一化、 ｄ ｒ ｏ ｐ ｏ ｕ ｔ 等技术进一步提高网络学习能力． 实验结果 表明： 该算法能较准确地评估五种常用的图像失真， 尤其在Ｊ Ｐ Ｅ Ｇ压缩、 Ｊ Ｐ Ｅ Ｇ ２ ０ ０ ０压缩和高斯模糊图像失真上与人眼主观感知质量具有很高的一致性，整体性能比较优于其他经典评价方法．
+					<span>详情</span>
 				</p>
 			</div>
-			<div class="list">
-				<h2></h2>
+			<div class="list" id="book3">
+				<h2>基于稀疏表示的图像模糊度评价方法</h2>
+				<h3></h3>
 				<p>
 					
+					<span>详情</span>
 				</p>
 			</div>
-			<div class="list">
-				<h2></h2>
+			<div class="list" id="book4">
+				<h2>基于最强方向梯度的图像模糊度评价方法</h2>
+				<h3></h3>
 				<p>
 					
+					<span>详情</span>
 				</p>
-			</div> -->
+			</div>
+			<div class="list" id="book5">
+				<h2>结合稀疏表示和概率潜在语义的图像模糊度评价</h2>
+				<h3></h3>
+				<p>
+					
+					<span>详情</span>
+				</p>
+			</div>
+			<div class="list" id="book6">
+				<h2>卷积神经网络研究综述</h2>
+				<h3></h3>
+				<p>
+					
+					<span>详情</span>
+				</p>
+			</div>
+			<div class="list" id="book7">
+				<h2>深度学习研究综述</h2>
+				<h3></h3>
+				<p>
+					
+					<span>详情</span>
+				</p>
+			</div>
+			<div class="list" id="book8">
+				<h2>图像理解中的卷积神经网络</h2>
+				<h3></h3>
+				<p>
+					
+					<span>详情</span>
+				</p>
+			</div>
+			<div class="list" id="book9">
+				<h2>图像模糊度评价研究</h2>
+				<h3></h3>
+				<p>
+					
+					<span>详情</span>
+				</p>
+			</div>
+			<div class="list" id="book10">
+				<h2>图像模糊复原及质量评价算法研究</h2>
+				<h3></h3>
+				<p>
+					
+					<span>详情</span>
+				</p>
+			</div>
+			<div class="list" id="book11">
+				<h2>无参考图像模糊度评价方法研究</h2>
+				<h3></h3>
+				<p>
+					
+					<span>详情</span>
+				</p>
+			</div>
 		</div>
 	</div>
 </body>

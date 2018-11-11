@@ -1,6 +1,6 @@
 #box{
 	margin: 0 auto;
-
+	overflow: hidden;
 }
 a{
 	text-decoration: none;
@@ -10,9 +10,18 @@ a{
 	display: none;
 }
 #box .left-nav{
+	position: fixed;
 	float: left;
 	border:1px solid #000;
-	margin: 10px 20px;
+	margin: 10px 50px;
+	/*height: 467px;*/
+	height: 359px;
+	overflow: hidden;
+/*	-webkit-transition:height 0.5s ease 0;
+	-moz-transition:height 0.5s ease 0;
+	-ms-transition:height 0.5s ease 0;
+	-o-transition:height 0.5s ease 0;
+	transition:height 0.5s ease 0;*/
 }
 #box .left-nav h2{
 	margin: 5px 20px;
@@ -43,15 +52,30 @@ a{
 	height: 30px;
 	line-height: 30px;
 	cursor: pointer;
+	font-weight: bold;
+	color: red;
+}
+#box .left-nav p:hover{
+	text-decoration: underline;
 }
 #box .right-nav{
-	float: right;
-	margin: 10px 100px 10px 0;
-	width: 1350px;
+	float: left;
+	margin: 10px 100px 10px 475px ;
+	width: 70%;
+	min-width: 1130px;
+	border: 1px solid #000;
+}
+#box .right-nav h1{
+	height: 40px;
+	line-height: 40px;
+	font-size: 34px;
+	font-weight: bold;
+	text-align: center;
+	padding: 20px 0;
+	border-bottom: 1px solid #000;
 }
 #box .right-nav .list{
-	border: 1px solid #000;
-	
+	border-bottom: 1px solid #000;
 }
 #box .right-nav .list h2{
 	text-align: center;
@@ -60,6 +84,13 @@ a{
 	font-weight: bold;
 	margin-top: 30px;
 	font-size: 28px;
+}
+#box .right-nav .list h3{
+	text-align: center;
+	height: 25px;
+	line-height: 25px;
+	margin-top: 10px;
+	font-size: 20px;
 }
 #box .right-nav .list p{
 	text-indent: 2em;
@@ -71,4 +102,8 @@ a{
 	margin-right: 30px;
 	color: red;
 	cursor: pointer;
+	font-weight: bold;
+}
+#box .right-nav .list span:hover{
+	text-decoration: underline;
 }
