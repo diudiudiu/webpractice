@@ -5,6 +5,27 @@ window.onload=function(){
 	var on=document.getElementById('on');
 	var left=document.getElementById('left-nav');
 	var timer;//定时器
+	var top=document.getElementById('top');
+	var tli=top.getElementsByTagName('li');
+
+
+	for(var i=2;i<tli.length;i++){
+		tli[i].index=i;
+		tli[i].onmouseover=function(){
+			for(var j=1;j<tli.length;j++){
+				tli[j].className='';
+			}
+			this.className='action';
+		}
+		tli[i].onmouseout=function(){
+			for(var j=1;j<tli.length;j++){
+				tli[j].className='';
+			}
+			tli[1].className='action';
+		}
+	}
+
+
 	more.onclick=function(){
 		for(var i=7;i<books.length;i++){
 			books[i].className='books';
