@@ -3,7 +3,7 @@ window.onload=function(){
     var tli=top.getElementsByTagName('li');
 
 
-    for(var i=2;i<tli.length;i++){
+    for(var i=1;i<tli.length;i++){
         tli[i].index=i;
         tli[i].onmouseover=function(){
             for(var j=1;j<tli.length;j++){
@@ -15,7 +15,7 @@ window.onload=function(){
             for(var j=1;j<tli.length;j++){
                 tli[j].className='';
             }
-            tli[1].className='action';
+            tli[3].className='action';
         }
     }
     
@@ -63,9 +63,7 @@ window.onload=function(){
     var more1=document.getElementById('wall1more');
     var more2=document.getElementById('wall2more');
     var more3=document.getElementById('wall3more');
-    more1.onclick=function(){
-        more('wall1',1);
-    }
+    
     more2.onclick=function(){
         more('wall2',2);
     }
@@ -74,6 +72,9 @@ window.onload=function(){
     }
     for(var i=1;i<=3;i++){
         waterfall('wall'+i,'out',i);
+    }
+    more1.onclick=function(){
+        more('wall1',1);
     }
     function more(wall,num){
             var oParent = document.getElementById(wall);// 父级对象

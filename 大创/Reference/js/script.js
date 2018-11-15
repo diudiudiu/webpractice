@@ -21,7 +21,7 @@ window.onload=function(){
 			for(var j=1;j<tli.length;j++){
 				tli[j].className='';
 			}
-			tli[1].className='action';
+			tli[6].className='action';
 		}
 	}
 
