@@ -1,0 +1,63 @@
+.box{
+    height: 1000px;
+    background-color:#000;
+}
+.nav{
+    height: 80px;
+    margin: 0px auto;
+    background-color: #fdfdfd;  
+    width: 1135px;
+}
+/*为nav清除浮动*/
+.nav：after{
+    clear: both;
+    display: block;
+    overflow: hidden;
+    content: "";
+}
+.nav .item{
+    height: 80px;
+    float: left;
+    perspective: 4000px;
+}
+.other{
+    margin-right: 3px;
+}
+.last{
+    margin-right: 0px;
+}
+.nav .item a{
+    display: block;
+    height: 80px;
+    text-decoration: none;
+    transition: all .5s;
+    transform-style: preserve-3d;
+}
+.nav .item a p{
+    height: 80px;
+    padding: 0 15px;
+    margin: 0px;
+    line-height: 80px;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-family: "Microsoft Yahei";0
+    border-radius: 2px;
+    transition: all .5s;
+}
+.nav .item a p:first-child{
+    background-color: #C34E11;
+    transform: translateZ(40px);
+}
+.nav .item a p:last-child{
+    background-color: #0C0994;
+    transform: translateZ(20px) rotateX(-90deg) ;
+    margin-top: -40px;
+}
+.nav .item a:hover{
+    transform: rotateX(90deg);
+}
+.nav .item a:hover p:last-child{
+    margin-top: 0px;
+    transform: translateZ(0) rotateX(-90deg);
+}
