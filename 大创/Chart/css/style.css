@@ -20,6 +20,9 @@
     float: left;
     perspective: 4000px;
 }
+.first{
+    
+}
 .other{
     margin-right: 3px;
 }
@@ -60,4 +63,10 @@
 .nav .item a:hover p:last-child{
     margin-top: 0px;
     transform: translateZ(0) rotateX(-90deg);
+}
+/*chart*/
+#container{
+    width: 900px;
+    height: 400px;
+    margin: 0 auto;
 }
