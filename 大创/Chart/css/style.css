@@ -1,5 +1,4 @@
 .box{
-    height: 1000px;
     background-color:#000;
 }
 .nav{
@@ -7,6 +6,11 @@
     margin: 0px auto;
     background-color: #fdfdfd;  
     width: 1135px;
+    -webkit-box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+    -ms-box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+    -o-box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+    box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
 }
 /*为nav清除浮动*/
 .nav：after{
@@ -49,7 +53,7 @@
     transition: all .5s;
 }
 .nav .item a p:first-child{
-    background-color: #C34E11;
+    background-color: #301906;
     transform: translateZ(40px);
 }
 .nav .item a p:last-child{
@@ -65,8 +69,24 @@
     transform: translateZ(0) rotateX(-90deg);
 }
 /*chart*/
-#container{
+#ChartTID{
     width: 900px;
     height: 400px;
     margin: 0 auto;
+}
+#ChartIT{
+    width: 900px;
+    height: 400px;
+    margin: 0 auto;
+}
+.main{
+    width: 1000px;
+    margin: 0 auto;
+    color: #fff;
+    padding-bottom: 50px;
+}
+.main>p{
+    font-size: 24px;
+    text-align: center;
+    margin:50px auto;
 }
