@@ -58,3 +58,30 @@ a{
   background: #0C0994;
  /* #181D65*/
 }
+/* main */
+.choose{
+  width: 1200px;
+  margin: 0 auto;
+}
+.left-choose{
+  width: 400px;
+  margin: 20px 40px 20px 80px;
+  height: 300px;
+  border: 1px solid #fff;
+  padding:20px 40px;
+  float: left;
+  position: relative;
+}
+.left-choose .arrow{
+  position: absolute;
+  right: -65px;
+  bottom: 150px;
+}
+.right-choose{
+  width: 400px;
+  margin: 20px 40px;
+  height: 300px;
+  border: 1px solid #fff;
+  padding:20px 40px;
+  float: left;
+}
