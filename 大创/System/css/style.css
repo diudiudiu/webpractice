@@ -72,6 +72,11 @@ a{
   float: left;
   position: relative;
 }
+.left-choose #add{
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
 .left-choose .arrow{
   position: absolute;
   right: -65px;

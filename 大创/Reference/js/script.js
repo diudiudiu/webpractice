@@ -9,7 +9,7 @@ window.onload=function(){
 	var tli=top.getElementsByTagName('li');
 
 
-	for(var i=2;i<tli.length;i++){
+	for(var i=1;i<tli.length;i++){
 		tli[i].index=i;
 		tli[i].onmouseover=function(){
 			for(var j=1;j<tli.length;j++){

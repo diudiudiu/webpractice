@@ -78,7 +78,7 @@ window.onload=function(){
     }
     function more(wall,num){
             var oParent = document.getElementById(wall);// 父级对象
-            // oParent.style.height=(oParent.offsetHeight+150)+'px';
+            // oParent.style.height=(oParent.offsetHeight+50)+'px';
             if(num=='1'){
                 for(var i=0;i<data1.data.length;i++){
                     var oPin=document.createElement('div'); //添加 元素节点
@@ -137,7 +137,6 @@ function waterfall(parent,classname){
             out[i].style.left=out[index].offsetLeft+'px';
             arr1[index]+=out[i].offsetHeight;
         }
-        console.log(arr1);
     }      
 }
 function getminHIndex(arr,minH){

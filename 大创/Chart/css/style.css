@@ -52,6 +52,43 @@
     border-radius: 2px;
     transition: all .5s;
 }
+/*导航 系统*/
+.nav .item span{
+    display: block;
+    height: 80px;
+    text-decoration: none;
+    transition: all .5s;
+    transform-style: preserve-3d;
+}
+.nav .item span .f1{
+    background-color: #301906;
+    transform: translateZ(40px);
+    height: 80px;
+    padding: 0 15px;
+    margin: 0px;
+    line-height: 80px; 
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-family: "Microsoft Yahei";0
+    border-radius: 2px;
+    transition: all .5s;
+}
+/* 当前页面 */
+.nav .item span .f2{
+    background-color: #0C0994;
+    transform: translateZ(40px);
+    height: 80px;
+    padding: 0 15px;
+    margin: 0px;
+    line-height: 40px; 
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-family: "Microsoft Yahei";0
+    border-radius: 2px;
+    transition: all .5s;
+}
 .nav .item a p:first-child{
     background-color: #301906;
     transform: translateZ(40px);
