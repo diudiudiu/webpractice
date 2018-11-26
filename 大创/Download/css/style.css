@@ -1,7 +1,8 @@
 html,body{
   height: 100%;
   width: 100%;
-  background: url(../images/bgp.jpg) no-repeat;
+ /* background: url(../images/bgp.jpg) no-repeat;*/
+ background: #000;
   background-size:100% 100%;
 }
 .box{
@@ -47,4 +48,29 @@ html,body{
 .box .first #top .action{
   background: #0C0994;
  /* #181D65*/
+}
+
+/* main */
+.main{
+  margin: 40px auto;
+  width: 1206px;
+  border:1px solid #fff;
+  overflow: hidden;
+  padding: 15px;
+}
+.main>div{
+  float: left;
+  border:1px solid #fff;
+  margin: 0 20px;
+  padding: 20px;
+  
+}
+.system{
+  width: 300px;
+}
+.database{
+  width: 320px;
+}
+.reference{
+  width: 340px
 }
