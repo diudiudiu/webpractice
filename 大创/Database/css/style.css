@@ -180,10 +180,7 @@ a{
 	padding-left: 30px;
 	padding-bottom: 30px;
 }
-#box .right-nav .list .wall{
-	overflow: hidden;
-	height: 400px;
-}
+
 #box .right-nav .list span{
 	color: #FF3B3B;
 	cursor: pointer;
@@ -198,23 +195,28 @@ a{
 
 /*瀑布流*/
 .wall{
-	position:relative;
-	margin:0 auto;
-	margin-left: 50px;
-	margin-bottom: 30px;
+	margin:0 auto 50px auto;
+	-webkit-column-width: 187px;
+	-moz-column-width: 187px;
+	-o-column-width: 187px;
+	-ms-column-width: 187px;
+	width: 1200px;
 }
 .wall .out{
-	padding:15px 0 0 20px;
+	height:100%;overflow: auto;
+	padding:0px 0 10px 15px;
 	float:left;
 }
 .wall .border{
 	border:1px solid #CCC;
 	border-radius:5px;
 	box-shadow:0 0 5px #ccc;
+	padding: 10px;
+	width: 150px
 }
 .wall .border img{
+	display: block;
 	width:150px;
 	height:auto;
-	padding:15px;
 }
 
