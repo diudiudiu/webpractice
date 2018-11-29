@@ -141,10 +141,13 @@ a{
   padding:20px 40px;
   float: left;
 }
+
+/* footer */
 .box .footer{
+  clear: both;
   margin: 0 auto;
   overflow: hidden;
-  padding-top: 100px;
+  padding-top: 230px;
 }
 .logo,.from,.call,.follow{
   float: left;
@@ -166,6 +169,7 @@ a{
   text-decoration: none;
   color: #5255F2;
 }
+
 .box .footer .line{
   border: 0.5px solid #fff;
   margin-top: 40px;
