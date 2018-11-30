@@ -184,3 +184,65 @@ a{
 #box .right-nav .list span:hover{
 	text-decoration: underline;
 }
+
+/* footer */
+.box .footer{
+  margin: 0 auto;
+  overflow: hidden;
+  padding-top: 100px;
+  clear: both;
+}
+.logo,.from,.call,.follow{
+  float: left;
+  margin-bottom: 40px;
+  padding:5px 15px;
+}
+.follow{
+  text-align: center;
+  font-size: 32px;
+}
+.logo{
+  margin-left:500px;
+  text-align: center;
+}
+.from,.call,.follow{
+   margin-left: 210px;
+}
+.from li >a{
+  text-decoration: none;
+  color: #5255F2;
+}
+
+.box .footer .line{
+  border: 0.5px solid #fff;
+  margin-top: 40px;
+  clear: both;
+}
+.from li:first-child,.call li:first-child,.follow li:first-child{
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.from li,.call li,.follow li{
+  height: 30px;
+  line-height: 30px;
+}
+.diudiudiu{
+  text-align: center;
+  text-indent: -40px;
+}
+.diudiudiu>a{
+  display: block;
+  text-decoration: none;
+  color: #5255F2;
+}
+.diudiudiu>span{
+  position: absolute;
+  bottom: 0;
+  margin-left: -50px;
+}
+.follow ul li a{
+  text-decoration: none;
+  color: #fff;
+}

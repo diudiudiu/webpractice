@@ -20,8 +20,13 @@ window.onload=function(){
 			tli[2].className='action';
 		}
 	}
-
+	var thisimg=document.getElementById('thisimg');
+	var textfield=document.getElementById('textfield');
+	var arrow=document.getElementById('arrow');
 	add.onclick=function(){
-		btn.onclick();
+		btn.onclick();	
+	}
+	arrow.onclick=function(){
+		thisimg.src=textfield.value;
 	}
 }
