@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/script.js"></script>
+</head>
+<style>
+*{
+	padding: 0;
+	margin: 0;
+}
+.nav{
+	height: 60px;
+	border-bottom: 1px solid #D5D0D0;
+	text-align: center;
+	z-index: 100;
+	background: #F9D8D8;
+}
+.nav marquee{
+	width: 150px;
+	height: 50px;
+	line-height: 50px;
+	margin-right: 60px;
+}
+#lyricContainer{
+	position: relative;
+    top: 130px;
+    
+}
+
+.nav audio{
+	margin: 0 auto;
+}
+p{
+	text-align: center;
+}
+.current-line-1 {
+    color: #ff1493;
+}
+.lrc{
+	overflow: hidden;
+	z-index: 20;
+	height: 600px;
+}
+</style>
+<body>
+	<div id="box">
+		<div class="nav">
+			<marquee behavior="" direction="left">我怀念的-林俊杰（LIVE）</marquee>
+			<audio  id="audio" src="music/bgm.mp3" controls>!audio not supported :(</audio>
+		</div>
+		
+	</div>
+	<div class="lrc">
+		<div id="lyricContainer"></div>
+	</div>
+	
+</body>
+</html>
