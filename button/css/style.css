@@ -1,0 +1,87 @@
+.box{
+	width: 900px;
+	margin: 0 auto;
+}
+.button{
+	float: left;
+	margin:50px 20px;
+	width: 200px;
+}
+.button .line{
+	position: absolute;
+	opacity: 1;
+	background: #f00;
+	display: block;
+}
+.button em{
+	font-style: normal;
+	font-weight: bold;
+	display:inline-block;
+	height: 50px;
+	width: 80px;
+	padding: 0 20px;
+	border: 2px solid #000;
+	font-size: 30px;
+	line-height: 50px;
+	position: relative;
+}
+.line-top{
+	height: 2px;
+	width: 0;
+	left: -110%;
+	top: -2px;
+	transition: all 0.4s ease 0.2s;
+	-o-transition: all 0.4s ease 0.2s;
+	-moz-transition: all 0.4s ease 0.2s;
+	-webkit-transition: all 0.4s ease 0.2s;
+	-ms-transition: all 0.4s ease 0.2s;
+}
+.button:hover .line-top{
+	width: 100%;
+	left: 0px;
+}
+.line-right{
+	height: 0px;
+	width: 2px;
+	top: -110%;
+	right: -2px;
+	transition: all 0.4s ease 0.2s;
+	-o-transition: all 0.4s ease 0.2s;
+	-moz-transition: all 0.4s ease 0.2s;
+	-webkit-transition: all 0.4s ease 0.2s;
+	-ms-transition: all 0.4s ease 0.2s;
+}
+.button:hover .line-right{
+	height: 100%;
+	top: 0px;
+}
+.line-bottom{
+	height: 2px;
+	width: 0px;
+	right: -110%;
+	bottom: -2px;
+	transition: all 0.4s ease 0.2s;
+	-o-transition: all 0.4s ease 0.2s;
+	-moz-transition: all 0.4s ease 0.2s;
+	-webkit-transition: all 0.4s ease 0.2s;
+	-ms-transition: all 0.4s ease 0.2s;
+}
+.button:hover .line-bottom{
+	width: 100%;
+	right: 0px;
+}
+.line-left{
+	height: 0px;
+	width: 2px;
+	bottom: -110%;
+	left: -2px;
+	transition: all 0.4s ease 0.2s;
+	-o-transition: all 0.4s ease 0.2s;
+	-moz-transition: all 0.4s ease 0.2s;
+	-webkit-transition: all 0.4s ease 0.2s;
+	-ms-transition: all 0.4s ease 0.2s;
+}
+.button:hover .line-left{
+	height: 100%;
+	bottom: 0px;
+}
