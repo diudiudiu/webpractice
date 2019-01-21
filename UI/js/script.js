@@ -54,7 +54,12 @@ window.onload=function(){
     context.closePath();
     context.fill();
     context.lineWidth = 10.0;//绘制内圆的线宽度
+     /* 多背景色 左对齐*/
 
+   function marginLeft(tag,oth){
+        tagmarginleft=tag.style.marginLeft;
+        oth.style.marginLeft=tagmarginleft+'px';
+   }
     function draw(cur){
         // 画内部空白  
         context.beginPath();  
