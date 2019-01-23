@@ -1,0 +1,31 @@
+@charset "utf-8";
+.box {
+  width: 300px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background: yellow;
+  height: 300px;
+}
+.triangle {
+  border-width: 100px;
+  border-color: transparent transparent #cccccc transparent;
+  border-style: dashed dashed solid dashed;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.list {
+  width: 600px;
+  margin: 30px auto;
+  padding: 0;
+}
+.list li {
+  height: 30px;
+}
+.list a {
+  float: left;
+}
+.list a:hover {
+  color: red;
+}
