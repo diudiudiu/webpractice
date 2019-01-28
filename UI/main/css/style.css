@@ -41,7 +41,7 @@
 	color: #9B9B9B;
 }
 .shadow{
-	box-shadow: 0 15px 20px  rgba(180, 180, 180, 0.5);;
+	box-shadow: 0 15px 20px  rgba(180, 180, 180, 0.5);
 }
 
 /* color */
@@ -85,6 +85,143 @@ body{
 	margin: 0 auto;
 	background: #FFFFFF;
 }
+
+/*  幕布  */
+.mask{
+	background-color: rgba(0,0,0,0.5);
+	position:fixed;
+	left:0;
+	top:0;
+	display:none;
+	height:100%;
+	width:100%;
+	z-index: 1999;
+	
+}
+.details{
+	margin:80px;
+	border-radius: 20px;
+	background: #ffffff;
+	height: 820px;
+	overflow: hidden;
+	padding-right: 40px;
+}
+.details_left{
+	width: 620px;
+	background: #74A5DD;
+	height: 740px;
+	position: absolute;
+	border-radius: 20px 0 0 20px;
+	margin-right: 40px;
+	padding: 40px;
+}
+.details_left>.subh3{
+	line-height: 35px;
+	color: #FFFFFF;
+	opacity: 0.5;
+	filter:Alpha(opacity=50);
+}
+.details_left>.mainh2{
+	color: #FFFFFF;
+}
+.details_left .info{
+	margin-left: 20px;
+	position: absolute;
+	bottom: 20px;
+	width: 580px;
+	height: 130px;
+	background-color: rgba(255,255,255,0.4);
+	border-radius: 20px;
+	padding-top: 30px;
+	/*filter: blur(10px);*/
+}
+.details_left .info .circle1{
+	float: left;
+	height: 100px;
+	width: 100px;
+	border-radius: 50px;
+	margin: 0px 20px 0px 30px;
+}
+.details_left .info  .title .mainh4{
+	margin-top: 29px;
+	color: #FFFFFF;
+}
+.details_left .info  .title .subh4{
+	line-height: 20px;
+	color: #FFFFFF;
+}
+.details_left .info  .title span{
+	display: block;
+	position: absolute;
+	right: 40px;
+	height: 40px;
+	width: 110px;
+	background: #FFFFFF;
+	color: #F25B68;
+	top: 60px;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 5px;
+	font-weight: bold;
+}
+.details_right{
+	background: #FFFFFF;
+	height: 740px;
+	margin-left: 740px;
+	width:calc(100% - 740px);
+	padding-top: 40px;
+	padding-bottom: 40px;
+	position: relative;
+}
+.details_right label{
+	border: 1px solid #9B9B9B;
+	border-radius: 5px;
+	color: #9B9B9B;
+}
+.details_right p{
+	font-size: 24px;
+	color: #9B9B9B;
+}
+.details_right .collect{
+	position: absolute;
+	border-top: 1px solid #9B9B9B;
+	bottom: 40px;
+	width: 	100%;
+	height: 54px;
+
+}
+.details_right .collect .collect_btn{
+	display: block;
+	line-height: 34px;
+	color: #FFFFFF;
+	width: 100px;
+	border: 1px solid #9B9B9B;
+	margin: 19px auto 0 auto;
+	text-align:center;
+	border-radius: 5px;
+}
+.details_right .collect .collect_btn img{
+	height: 18px;
+	width: 18px;
+	line-height: 34px;
+}
+#close{
+	position: absolute;
+	right: 17.5px;
+	top: 17.5px;
+	height: 45px;
+	width: 45px;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
 /* header */
 .header{
 	height: 210px;
@@ -145,6 +282,7 @@ body{
 	border-radius: 20px;
 	float: left;
 	margin-right: 40px;
+	cursor: pointer;
 }
 .main .card .card2{
 	height: 480px;
