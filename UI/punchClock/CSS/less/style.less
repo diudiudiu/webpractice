@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+@white:#FFFFFF;
+@black:#1A1A1A;
+@grey:#E3E3E3;
+@border:#D2D2D2;
+/*
+	1A1A1A	标题
+	9b9b9b	副标题
+ */
+.border_radius(@radius:20px){
+	-webkit-border-radius:@radius;
+	-moz-border-radius:@radius;
+	border-radius:@radius;
+}
+.box{
+	background: @white;
+	width: 100%;
+	border-right:1px solid @border;
+	.header{
+		height: 80px;
+	}
+	.main{
+		.top{
+			height: 160px;
+			border-bottom: 1px solid @grey;
+			h1{
+				margin-left: 40px;
+				color:@black;
+				float: left;
+				line-height: 160px;
+			}
+			ul{
+				position: absolute;
+				right: 40px;
+				margin-top: 60px;
+				overflow: hidden;
+				li{
+					font-weight: bold;
+					float: left;
+					padding: 0 20px;
+					line-height: 40px;
+					border:1px solid @grey;
+					.border_radius();
+					margin-right: 20px;
+					color: @black;
+					&:nth-last-child(1){
+						margin-right: 0px;
+					}
+				}
+			}
+		}
+		.project{
+			float: left;
+			width: 500px;
+			border-right: 1px solid @border;
+			.fenlei{
+				margin-top: 30px;
+				padding-bottom: 30px;
+				overflow: hidden;
+				border-bottom: 1px solid @border;
+				li{
+					font-weight: bold;
+					float: left;
+					padding: 0 20px;
+					text-align: center;
+					line-height: 38px;
+					height: 38px;
+					border:1px solid @grey;
+					.border_radius(5px);
+					margin-left:20px;
+					color: @black;
+					&:first-child{
+						margin-left: 40px;
+						a{
+							color:@white;
+						}
+					}
+				}
+			}
+		}
+		.meclock{
+			overflow: hidden;
+			h3{
+				margin: 20px 0 20px 40px;
+			}
+			ul{			
+				margin-left: 40px;
+				overflow: hidden;
+				margin-bottom: 20px;
+				width: 1900px;
+				li{
+					float: left;
+					margin-right: 40px;
+					width: 190px;
+					position: relative;
+					h4{
+						margin:20px auto;
+						text-align: center;
+					}
+					.circle1{
+						width: 130px;
+						height: 130px;
+						position: absolute;
+						.border_radius(65px);
+						left: 30px;
+						top: 30px;
+					}
+				}
+			}
+		}
+		.mycollect{
+			margin-left: 40px;
+			h3{
+				margin: 20px 0;
+			}
+		}
+	}
+}

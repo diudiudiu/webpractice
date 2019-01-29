@@ -1,0 +1,113 @@
+@charset "utf-8";
+/*
+	1A1A1A	标题
+	9b9b9b	副标题
+ */
+.box {
+  background: #ffffff;
+  width: 100%;
+  border-right: 1px solid #d2d2d2;
+}
+.box .header {
+  height: 80px;
+}
+.box .main .top {
+  height: 160px;
+  border-bottom: 1px solid #e3e3e3;
+}
+.box .main .top h1 {
+  margin-left: 40px;
+  color: #1a1a1a;
+  float: left;
+  line-height: 160px;
+}
+.box .main .top ul {
+  position: absolute;
+  right: 40px;
+  margin-top: 60px;
+  overflow: hidden;
+}
+.box .main .top ul li {
+  font-weight: bold;
+  float: left;
+  padding: 0 20px;
+  line-height: 40px;
+  border: 1px solid #e3e3e3;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  margin-right: 20px;
+  color: #1a1a1a;
+}
+.box .main .top ul li:nth-last-child(1) {
+  margin-right: 0px;
+}
+.box .main .project {
+  float: left;
+  width: 500px;
+  border-right: 1px solid #d2d2d2;
+}
+.box .main .project .fenlei {
+  margin-top: 30px;
+  padding-bottom: 30px;
+  overflow: hidden;
+  border-bottom: 1px solid #d2d2d2;
+}
+.box .main .project .fenlei li {
+  font-weight: bold;
+  float: left;
+  padding: 0 20px;
+  text-align: center;
+  line-height: 38px;
+  height: 38px;
+  border: 1px solid #e3e3e3;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin-left: 20px;
+  color: #1a1a1a;
+}
+.box .main .project .fenlei li:first-child {
+  margin-left: 40px;
+}
+.box .main .project .fenlei li:first-child a {
+  color: #ffffff;
+}
+.box .main .meclock {
+  overflow: hidden;
+}
+.box .main .meclock h3 {
+  margin: 20px 0 20px 40px;
+}
+.box .main .meclock ul {
+  margin-left: 40px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  width: 1900px;
+}
+.box .main .meclock ul li {
+  float: left;
+  margin-right: 40px;
+  width: 190px;
+  position: relative;
+}
+.box .main .meclock ul li h4 {
+  margin: 20px auto;
+  text-align: center;
+}
+.box .main .meclock ul li .circle1 {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  -webkit-border-radius: 65px;
+  -moz-border-radius: 65px;
+  border-radius: 65px;
+  left: 30px;
+  top: 30px;
+}
+.box .main .mycollect {
+  margin-left: 40px;
+}
+.box .main .mycollect h3 {
+  margin: 20px 0;
+}
