@@ -11,6 +11,10 @@
 .box .header {
   height: 80px;
 }
+.box .main {
+  width: 100%;
+  overflow: hidden;
+}
 .box .main .top {
   height: 160px;
   border-bottom: 1px solid #e3e3e3;
@@ -105,9 +109,65 @@
   left: 30px;
   top: 30px;
 }
-.box .main .mycollect {
-  margin-left: 40px;
-}
 .box .main .mycollect h3 {
   margin: 20px 0;
+  margin-left: 40px;
+}
+.box .main .mycollect ul {
+  margin-left: 20px;
+  overflow: hidden;
+  width: 460px;
+}
+.box .main .mycollect ul li {
+  position: relative;
+  height: 60px;
+  overflow: hidden;
+}
+.box .main .mycollect ul li .circle2 {
+  height: 40px;
+  width: 40px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  position: absolute;
+  left: 20px;
+  top: 10px;
+}
+.box .main .mycollect ul li .mainh5 {
+  float: left;
+  margin-left: 90px;
+  line-height: 60px;
+}
+.box .main .mycollect ul li .subh5 {
+  float: right;
+  margin-right: 20px;
+  font-weight: bold;
+  line-height: 60px;
+  color: #e3e3e3;
+}
+.box .main .view:nth-child(1) {
+  overflow: hidden;
+}
+.box .main .view:nth-child(1) .mainh2 {
+  margin: 40px 0 20px 40px;
+}
+.box .main .view:nth-child(1) ul li {
+  margin-left: 40px;
+}
+.box .main .view:last-child {
+  width: calc(100% - 501px);
+  float: left;
+  height: 840px;
+}
+.box .main .view:last-child .image {
+  float: left;
+  width: 639px;
+  height: 840px;
+}
+.box .main .view:last-child .safearea {
+  float: left;
+  width: calc(100% - 679px);
+  background: #B7F0FF;
+  margin: 0 20px;
+  height: 840px;
 }

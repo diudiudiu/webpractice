@@ -21,6 +21,8 @@
 		height: 80px;
 	}
 	.main{
+		width: 100%;
+		overflow: hidden;
 		.top{
 			height: 160px;
 			border-bottom: 1px solid @grey;
@@ -110,9 +112,75 @@
 			}
 		}
 		.mycollect{
-			margin-left: 40px;
+			
 			h3{
 				margin: 20px 0;
+				margin-left: 40px;
+			}
+			ul{
+				margin-left: 20px;
+				overflow: hidden;
+				width: 460px;
+				li{
+					position: relative;
+					height: 60px;
+					overflow: hidden;
+					.circle2{
+						height: 40px;
+						width: 40px;
+						.border_radius(20px);
+						position: absolute;
+						left: 20px;
+						top: 10px;
+						
+					}
+					.mainh5{
+						float: left;
+						margin-left: 90px;
+						line-height: 60px;
+
+					}
+					.subh5{
+						float: right;
+						margin-right:20px;
+						font-weight: bold;
+						line-height: 60px;
+						color: @grey;
+					}
+				}
+			}
+		}
+
+		.view{
+			
+			&:nth-child(1){
+				overflow: hidden;
+				.mainh2{
+					margin:40px 0 20px 40px;
+				}
+				ul{
+					li{
+						margin-left: 40px;
+					}
+				}
+			}
+			&:last-child{
+				width: calc(~"100% - 501px");
+				float: left;
+				height:840px; 
+				
+				.image{
+					float: left;
+					width: 639px;
+					height:840px; 
+				}
+				.safearea{
+					float: left;
+					width: calc(~"100% - 679px");
+					background: #B7F0FF;
+					margin:0 20px;
+					height:840px; 
+				}
 			}
 		}
 	}
