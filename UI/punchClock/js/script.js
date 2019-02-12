@@ -13,6 +13,31 @@ window.onload=function(){
 	circleProgress(context2,90,20);
 	circleProgress(context3,90,20);
 	
+
+
+    var card1=document.getElementById('card1');
+    var mask=document.getElementById('mask');
+    // 禁止事件冒泡
+    mask.onclick=function(e) { 
+        //如果提供了事件对象，则这是一个非IE浏览器 
+        if ( e && e.stopPropagation ) {
+            //因此它支持W3C的stopPropagation()方法 
+            e.stopPropagation(); 
+            mask.style.display="none";
+        }
+            
+        else{
+            //否则，我们需要使用IE的方式来取消事件冒泡 
+            window.event.cancelBubble = true; 
+            mask.style.display="none";
+        }
+            
+    }
+    card1.onclick=function(){
+        mask.style.display="block";
+    }
+
+
 	function circleProgress(context,value,average){
         var grd=context.createLinearGradient(0,0,190,0);
         grd.addColorStop("0","#F25B68");
@@ -20,7 +45,7 @@ window.onload=function(){
         var value= Number(value),// 当前百分比,数值
         average = Number(average),// 平均百分比
         color = "#000000",// 进度条、文字样式
-        maxpercent = 100,//最大百分比，可设置
+        maxpercent =100,//最大百分比，可设置
         c_width = 190,// canvas，宽度
         c_height =190;// canvas,高度
 	
@@ -50,7 +75,7 @@ window.onload=function(){
         context.lineCap = 'round';
         context.closePath();
         context.fill();
-        context.lineWidth = 10.0;//绘制内圆的线宽度
+        context.lineWidth = 25.0;//绘制内圆的线宽度
          /* 多背景色 左对齐*/
 
        function marginLeft(tag,oth){
@@ -61,7 +86,7 @@ window.onload=function(){
             // 画内部空白  
             context.beginPath();  
             context.moveTo(24, 24);  
-            context.arc(c_width/2, c_height/2, c_height/2-10, 0, Math.PI * 2, true);  
+            context.arc(c_width/2, c_height/2, c_height/2-25, 0, Math.PI * 2, true);  
             context.closePath();  
             context.fillStyle = 'rgba(255,255,255,1)';  // 填充内部颜色
             context.fill();
@@ -69,7 +94,7 @@ window.onload=function(){
             context.beginPath();
             // 绘制一个中心点为（c_width/2, c_height/2），半径为c_height/2-5不与外圆重叠，
             // 起始点-(Math.PI/2)，终止点为((Math.PI*2)*cur)-Math.PI/2的 整圆cur为每一次绘制的距离
-            context.arc(c_width/2, c_height/2, c_height/2-5, -(Math.PI / 2), ((Math.PI * 2) * cur ) - Math.PI / 2, false);
+            context.arc(c_width/2, c_height/2, c_height/2-15, -(Math.PI / 2), ((Math.PI * 2) * cur ) - Math.PI / 2, false);
             context.stroke();
             //在中间写字  
             context.font = "bold 18px Arial";  // 字体大小，样式
