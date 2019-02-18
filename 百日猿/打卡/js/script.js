@@ -17,21 +17,34 @@ window.onload=function(){
 
     var card1=document.getElementById('card1');
     var mask=document.getElementById('mask');
+    var details=document.getElementById('details');
+
     // 禁止事件冒泡
-    mask.onclick=function(e) { 
+   details.onclick=function(e) { 
         //如果提供了事件对象，则这是一个非IE浏览器 
         if ( e && e.stopPropagation ) {
             //因此它支持W3C的stopPropagation()方法 
             e.stopPropagation(); 
-            mask.style.display="none";
         }
             
         else{
             //否则，我们需要使用IE的方式来取消事件冒泡 
             window.event.cancelBubble = true; 
-            mask.style.display="none";
+        }
+    }
+
+    mask.onclick=function(e) { 
+        //如果提供了事件对象，则这是一个非IE浏览器 
+        if ( e && e.stopPropagation ) {
+            //因此它支持W3C的stopPropagation()方法 
+            e.stopPropagation(); 
         }
             
+        else{
+            //否则，我们需要使用IE的方式来取消事件冒泡 
+            window.event.cancelBubble = true; 
+        }
+        mask.style.display="none";
     }
     card1.onclick=function(){
         mask.style.display="block";

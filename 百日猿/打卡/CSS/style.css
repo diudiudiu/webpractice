@@ -241,10 +241,17 @@
   float: left;
   overflow: hidden;
 }
-.box .main .view h2 {
+.box .main .view ul {
+  width: 100%;
+  overflow: hidden;
+}
+.box .main .view ul .viewcard {
+  float: left;
+}
+.box .main .view ul .viewcard h2 {
   margin: 40px 0 20px 40px;
 }
-.box .main .view ul li {
+.box .main .view ul .viewcard ul li {
   margin-left: 40px;
   width: 400px;
   height: 460px;
@@ -255,22 +262,7 @@
   -moz-border-radius: 20px;
   border-radius: 20px;
 }
-.box .main .view ul li h3 {
+.box .main .view ul .viewcard ul li h3 {
   margin-left: 20px;
   color: #ffffff;
-}
-.box .main .view:last-child {
-  height: 840px;
-}
-.box .main .view:last-child .image {
-  float: left;
-  width: 639px;
-  height: 840px;
-}
-.box .main .view:last-child .safearea {
-  float: left;
-  width: calc(100% - 679px);
-  background: #B7F0FF;
-  margin: 0 20px;
-  height: 840px;
 }

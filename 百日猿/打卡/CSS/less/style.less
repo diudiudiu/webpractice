@@ -248,39 +248,31 @@
 			width: calc(~"100% - 501px");
 			float: left;
 			overflow: hidden;
-			h2{
-				margin:40px 0 20px 40px;
-			}
 			ul{
-				li{
-					margin-left: 40px;
-					width: 400px;
-					height: 460px;
+				width: 100%;
+				overflow: hidden;
+				.viewcard{
 					float: left;
-					padding-top: 20px;
-					cursor: pointer;
-					.border_radius(20px);
-					h3{
-						margin-left: 20px;
-						color:@white;
+					h2{
+						margin:40px 0 20px 40px;
+					}
+					ul{
+						li{
+							margin-left: 40px;
+							width: 400px;
+							height: 460px;
+							float: left;
+							padding-top: 20px;
+							cursor: pointer;
+							.border_radius(20px);
+							h3{
+								margin-left: 20px;
+								color:@white;
+							}
+						}
 					}
 				}
-			}
-			&:last-child{	
-				height:840px; 		
-				.image{
-					float: left;
-					width: 639px;
-					height:840px; 
-				}
-				.safearea{
-					float: left;
-					width: calc(~"100% - 679px");
-					background: #B7F0FF;
-					margin:0 20px;
-					height:840px; 
-				}
-			}
+			}		
 		}
 	}
 }
