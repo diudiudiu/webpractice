@@ -24,19 +24,53 @@
 		</div>
 		<div class="choose">
 			<div class="left-choose">
-				<label>请选择待处理的图像</label>
-				<input type='text' id='textfield' class='txt' />
-				<input type='button' class='btn' id='btn' value='浏览...'onclick="document.getElementById('fileField').click()" />
-				<input  type="file" id="fileField"class="file" size="28" onchange="document.getElementById('textfield').value=this.value" />
-				<br>
-				<img src="../images/add.png" id="add" style="height: 250px;width: 250px;">
+				<form action="">
+					请选择文件样式: <br>	
+					<input type="radio" name="choosefile" value="onepic" id="onepic" checked="checked">
+					<label for="onepic">单图像识别</label>
+					<input  type="file" id="fileField" class="file"  /><br>
+
+					<input type="radio" name="choosefile" value="morepic" id="morepic">
+					<label for="morepic">多图像选取</label>
+					<input  type="file" id="fileField2" class="file"  /><br>
+
+					<input type="radio" name="choosefile" value="files" id="files">
+					<label for="files">文件夹选取</label>
+					<input  type="file" id="fileField3" class="file"  /><br>
+
+					<!-- <input type='text' id='textfield' class='txt' /> -->
+					<!-- <input type='button' class='btn' id='btn' value='浏览...'onclick="document.getElementById('fileField').click()" /> -->
+					<!-- <input  type="file" id="fileField" class="file"  webkitdirectory  /> -->
+					<!-- <input  type="file" id="fileField" class="file"  /><br> -->
+					<!-- <input  type="file" id="fileField"class="file" size="28" onchange="document.getElementById('textfield').value=this.value" /> -->
+					<br>
+					请选择评价方法：<br>
+					<input type="radio" name="func" value="zhineng" id="zhineng" checked="checked">
+					<label for="zhineng">智能评价</label>
+					<input type="radio" name="func" value="bianyuan" id="bianyuan">
+					<label for="bianyuan">边缘检测法</label>
+					<br>
+					<input type="radio" name="func" value="nengliang" id="nengliang">
+					<label for="nengliang">能量分布法</label>
+					<input type="radio" name="func" value="xinhao" id="xinhao">
+					<label for="xinhao">像素信号量法</label>
+					<br><br>
+					<div class="button">查看日志</div>
+					<div class="button">开始</div>
+				</form>
+				
+				<!-- <img src="../images/add.png" id="add" style="height: 250px;width: 250px;"> -->
 				<!-- <label>警告：系统将会自动忽略非图像类型的文件。</label> -->
 				
-				<i class="arrow" id="arrow"><img src="../images/right.jpg" style="width: 50px;height: 50px;"></i>
+				<i class="arrow" id="arrow"><img src="../images/right.png" style="width: 50px;height: 50px;"></i>
 			</div>
 			<div class="right-choose">
-				<label>当前图像为</label>
-				<img id="thisimg" src="" alt="">
+				<h1>结果</h1>
+				<img id="result" src="../images/Eye.jpg" alt="result">
+				<div class="button">上一张</div>
+				
+				<div class="button">算法比对结果</div>
+				<div class="button">下一张</div>
 			</div>
 		</div>
 		<div class="footer">
@@ -49,14 +83,14 @@
 				<ul>
 					<li>来源</li>
 					<li>文献：<a href="">中国知网</a></li>
-					<li>数据库：<a href=""></a></li>
+					<li>数据库：<a href="">TID2013</a></li>
 				</ul>
 			</div>
 			<div class="call">
 				<ul>
 					<li>联系我们</li>
-					<li>QQ:</li>
-					<li>VX:</li>
+					<li>QQ:682994071</li>
+					<li></li>
 				</ul>
 			</div>
 			<div class="follow">

@@ -20,13 +20,19 @@ window.onload=function(){
 			tli[2].className='action';
 		}
 	}
-	var thisimg=document.getElementById('thisimg');
-	var textfield=document.getElementById('textfield');
-	var arrow=document.getElementById('arrow');
-	add.onclick=function(){
-		btn.onclick();	
+
+	var	fileField=document.getElementById('fileField');
+	fileField.onchange=function(){
+		alert("文件类型错误！请重新上传。");
 	}
-	arrow.onclick=function(){
-		thisimg.src=textfield.value;
-	}
+
+	// var thisimg=document.getElementById('thisimg');
+	// var textfield=document.getElementById('textfield');
+	// var arrow=document.getElementById('arrow');
+	// add.onclick=function(){
+	// 	btn.onclick();	
+	// }
+	// arrow.onclick=function(){
+	// 	thisimg.src=textfield.value;
+	// }
 }

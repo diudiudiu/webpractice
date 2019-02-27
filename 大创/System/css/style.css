@@ -1,7 +1,6 @@
 html,body{
   height: 100%;
-  /*background: url(../../images/bg7.jpg);*/
-  background: #000;
+  background: url(../../images/bg4.jpg);
   background-size:100% 100%;
 }
 /* body*/
@@ -17,7 +16,11 @@ a{
   color: #fff;
   text-decoration:none;
 }
-.file{  filter:alpha(opacity:0);opacity: 0;width:0px }
+/*.file{  
+  filter:alpha(opacity:0);
+  opacity: 0;
+  width:0px ;
+}*/
 /* 导航 */
 .box .first{
   margin: 0 auto;
@@ -60,43 +63,98 @@ a{
 }
 /* main */
 .choose{
-  width: 1200px;
+  width: 1600px;
   margin: 0 auto;
+  font-size: 22px;
 }
 .left-choose{
-  width: 400px;
+  width: 600px;
   margin: 20px 40px 20px 80px;
-  height: 300px;
-  border: 1px solid #fff;
-  padding:20px 40px;
+  height: 480px;
+  border: 3px solid #fff;
+  padding:30px 50px;
   float: left;
   position: relative;
+  border-radius: 20px;
+}
+.left-choose .file{
+  margin-left: 100px;
+  font-size: 18px;
+  width: 250px;
+}
+.left-choose #zhineng,#onepic,#morepic,#files,#nengliang{
+  margin-left: 60px;
+}
+.left-choose #xinhao{
+  margin-left: 130px;
+}
+.left-choose #bianyuan{
+  margin-left: 152px;
 }
 .left-choose #add{
   display: block;
   margin: 0 auto;
   cursor: pointer;
 }
+.left-choose .button{
+  font-size: 18px;
+  padding: 10px 20px;
+  margin-left: 75px;
+  margin-top: 50px;
+  background: #6C928C;
+  border-radius: 10px;
+  float: left;
+  font-weight: bolder;
+  cursor: pointer;
+  filter:alpha(opacity:95);
+  opacity: 0.9;
+}
+.left-choose .button:last-child{
+   margin-left: 190px;
+}
 .left-choose .arrow{
   position: absolute;
   right: -65px;
-  bottom: 150px;
+  bottom: 250px;
 }
 .right-choose{
-  width: 400px;
+  width: 600px;
   margin: 20px 40px;
-  height: 300px;
-  border: 1px solid #fff;
+  height: 500px;
+  border: 3px solid #fff;
   padding:20px 40px;
   float: left;
+  border-radius: 20px;
 }
-
+.right-choose h1{
+  margin: 0 auto;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bolder;
+}
+.right-choose .button{
+  font-size: 18px;
+  padding: 10px 20px;
+  margin-left: 75px;
+  margin-top: 50px;
+  background: #6C928C;
+  border-radius: 10px;
+  float: left;
+  font-weight: bolder;
+  cursor: pointer;
+  filter:alpha(opacity:95);
+  opacity: 0.9;
+}
+#result{
+  margin: 20px auto;
+  display: block;
+}
 /* footer */
 .box .footer{
   clear: both;
   margin: 0 auto;
   overflow: hidden;
-  padding-top: 230px;
+  padding-top: 30px;
 }
 .logo,.from,.call,.follow{
   float: left;
@@ -136,7 +194,7 @@ a{
 }
 .diudiudiu{
   text-align: center;
-  text-indent: -40px;
+  position: relative;
 }
 .diudiudiu>a{
   display: block;
@@ -144,9 +202,8 @@ a{
   color: #5255F2;
 }
 .diudiudiu>span{
-  position: absolute;
-  bottom: 0;
-  margin-left: -50px;
+  display: block;
+
 }
 .follow ul li a{
   text-decoration: none;
