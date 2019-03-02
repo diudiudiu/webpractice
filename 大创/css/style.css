@@ -122,7 +122,7 @@ box-shadow: 0px 1px 4px rgba(255, 255, 255, 0.3), 0px 0px 40px rgba(255, 255, 25
   font-size: 32px;
 }
 .logo{
-  margin-left:500px;
+  margin-left:400px;
   text-align: center;
 }
 .from,.call,.follow{
@@ -149,7 +149,7 @@ box-shadow: 0px 1px 4px rgba(255, 255, 255, 0.3), 0px 0px 40px rgba(255, 255, 25
 }
 .diudiudiu{
   text-align: center;
-  text-indent: -40px;
+  position: relative;
 }
 .diudiudiu>a{
   display: block;
@@ -157,9 +157,7 @@ box-shadow: 0px 1px 4px rgba(255, 255, 255, 0.3), 0px 0px 40px rgba(255, 255, 25
   color: #5255F2;
 }
 .diudiudiu>span{
-  position: absolute;
-  bottom: 0;
-  margin-left: -50px;
+  display: block;
 }
 .follow ul li a{
   text-decoration: none;
