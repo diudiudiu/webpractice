@@ -15,43 +15,35 @@ a{text-decoration: none;color: #1A1A1A}
 /* title */
 .mainh1{
 	font-size: 50px;
-	font-weight: bold;
+	
 }
 .mainh2{
 	font-size: 40px;
-	font-weight: bold;
 }
 .mainh3{
 	font-size: 30px;
-	font-weight: bold;
 }
 .mainh4{
 	font-size: 24px;
-	font-weight: bold;
 }
 .mainh5{
 	font-size: 20px;
-	font-weight: bold;
 }
 
 .subh1{
 	font-size: 30px;
-	font-weight: bold;
 	color: #9B9B9B;
 }
 .subh2{
-	font-size: 55px;
-	font-weight: bold;
+	font-size: 25px;
 	color: #9B9B9B;
 }
 .subh3{
 	font-size: 18px;
-	font-weight: bold;
 	color: #9B9B9B;
 }
 .subh4{
 	font-size: 16px;
-	font-weight: bold;
 	color: #9B9B9B;
 }
 .shadow{
