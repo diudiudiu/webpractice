@@ -241,17 +241,17 @@
   float: left;
   overflow: hidden;
 }
-.box .main .view ul {
-  width: 100%;
-  overflow: hidden;
+.box .main .view .viewcard {
+  width: 2500px;
 }
-.box .main .view ul .viewcard {
-  float: left;
-}
-.box .main .view ul .viewcard h2 {
+.box .main .view .viewcard h2 {
   margin: 40px 0 20px 40px;
 }
-.box .main .view ul .viewcard ul li {
+.box .main .view .viewcard ul {
+  display: flex;
+  height: 480px;
+}
+.box .main .view .viewcard ul li {
   margin-left: 40px;
   width: 400px;
   height: 460px;
@@ -262,7 +262,7 @@
   -moz-border-radius: 20px;
   border-radius: 20px;
 }
-.box .main .view ul .viewcard ul li h3 {
+.box .main .view .viewcard ul li h3 {
   margin-left: 20px;
   color: #ffffff;
 }
