@@ -1,0 +1,142 @@
+@charset"utf-8";
+
+@red:#F25b68;
+@white:#FFFFFF;
+@bgwhite:#F7F7F7;
+@bgblack:#434343;
+
+@fontblack:#1A1A1A;
+@fontgrey:#9B9B9B;
+@fontwhite:rgba(255,255,255,0.5);
+@border: #D2D2D2;
+@btn:#707070;
+@grey:#E3E3E3;
+
+.radius(@radius:20px){
+	-webkit-border-radius:@radius;
+	-moz-border-radius:@radius;
+	border-radius:@radius;
+}
+.bg1(){
+	background: -webkit-linear-gradient(to right, #F25B68, #DA628C);
+	background: -o-linear-gradient(to right, #F25B68, #DA628C);
+	background: linear-gradient(to right, #F25B68, #DA628C);
+}
+
+.main{
+	padding-top: 48px;
+	width: 100%;
+	background: @bgwhite;
+	overflow: hidden;
+	.card{
+		display: flex;
+		height: 510px;
+		width: 1704px;
+		margin:0 auto;
+		padding-bottom: 60px;
+		h3{
+			color: @white;
+		}
+		.card1{
+			width: 840px;
+			height: 510px;
+			color: white;
+			.radius();
+			cursor: pointer;
+		}
+		.card2{
+			width: 408px;
+			height: 510px;
+			margin-left: 24px;
+			.radius();
+			.subh3{
+				margin: 15px 0 0 20px;
+			}
+			.mainh3{
+				margin-left: 20px;
+			}
+		}
+	}
+	.find{
+		display: flex;
+		height: 840px;
+		// position: relative;
+	// 	left: calc(~"50%-852px");
+		margin: 0 auto;
+		width: 1704px;
+		padding-bottom: 48px;
+		.findcontent{
+			width: 172px;
+			margin-left: 476px;
+		}
+		.finddiv{
+			li{
+				width: 1056px;
+				height: 264px;
+				margin-bottom: 48px;
+				.radius();
+				position: relative;
+				h3{
+					color:@white;
+				}
+				.subh3{
+					position: absolute;
+					top:171px;
+					left: 20px;
+				}
+				.mainh3{
+					position: absolute;
+					top:196px;
+					left: 20px;
+				}
+			}
+			li:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+	.punch{
+		width: 2136px;
+		margin-left: 99px;
+		h2{
+			margin-bottom: 27px;
+			height: 67px;
+		}
+		.punchcard{
+			display: flex;
+			height: 200px;
+			padding-bottom: 60px;
+			li{
+				width: 516px;
+				height: 200px;
+				display: flex;
+				margin-right: 24px;
+				.radius();
+				background: @white;
+				.canvas{
+					margin: 20px;
+				}
+				.cardright{
+					position: relative;
+					.mainh3{
+						width: 280px;
+						height: 80px;
+						margin-top: 12px;
+					}
+					.subh3{
+						width: 280px;
+						height: 50px;
+					}
+					.btn{
+						position: absolute;
+						right: 101px;
+						bottom: 20px;
+					}
+				}
+			}
+			li:last-child{
+				margin-left: 0;
+			}
+		}
+	}
+}
