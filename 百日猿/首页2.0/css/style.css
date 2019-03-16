@@ -76,9 +76,8 @@
 }
 .main .punch {
   width: 2136px;
-  margin-left: 99px;
 }
-.main .punch h2 {
+.main .punch h1 {
   margin-bottom: 27px;
   height: 67px;
 }
@@ -119,4 +118,171 @@
 }
 .main .punch .punchcard li:last-child {
   margin-left: 0;
+}
+.main .recommend {
+  width: 1704px;
+  height: 604px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+.main .recommend h1 {
+  margin-bottom: 27px;
+}
+.main .recommend .recommendcard {
+  display: flex;
+  height: 510px;
+}
+.main .recommend .recommendcard > li {
+  width: 408px;
+  margin-right: 24px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.main .recommend .recommendcard > li .up {
+  height: 85px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 15px 20px 0 20px;
+}
+.main .recommend .recommendcard > li .up h3 {
+  color: #ffffff;
+}
+.main .recommend .recommendcard > li .down1 {
+  margin-top: 410px;
+  height: 85px;
+  padding: 15px 20px 0 20px;
+  background: #ffffff;
+}
+.main .recommend .recommendcard > li .down2 {
+  margin-top: 410px;
+  height: 80px;
+  padding: 20px 24px 0 24px;
+  background: #ffffff;
+  display: flex;
+}
+.main .recommend .recommendcard > li .down2 .circle1 {
+  height: 60px;
+  width: 60px;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
+  margin-right: 10px;
+}
+.main .recommend .recommendcard > li .down2 .title {
+  margin: 5px 100px 0 0;
+  height: 49px;
+  width: 110px;
+}
+.main .recommend .recommendcard > li .down2 .btn {
+  margin: 14px 0;
+}
+.main .recommend .recommendcard > li:first-child {
+  padding: 0 20px;
+  width: 368px;
+}
+.main .recommend .recommendcard > li:first-child .subh3:first-child {
+  margin: 27px 0 1px 0;
+}
+.main .recommend .recommendcard > li:first-child .mainh3 {
+  margin-bottom: 32px;
+}
+.main .recommend .recommendcard > li:first-child ul li {
+  display: flex;
+  border-top: 1px solid #d2d2d2;
+  height: 79px;
+}
+.main .recommend .recommendcard > li:first-child ul li .circle1 {
+  height: 60px;
+  width: 60px;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
+  margin: 10px 10px 10px 0;
+}
+.main .recommend .recommendcard > li:first-child ul li .title {
+  margin: 15px 108px 0 0;
+  height: 49px;
+  width: 110px;
+}
+.main .recommend .recommendcard > li:first-child ul li .btn {
+  margin: 24px 0;
+}
+.main .recommend .recommendcard > li:first-child .subh3:last-child {
+  margin-top: 24px;
+  text-align: center;
+  cursor: pointer;
+}
+.main .recommend .recommendcard > li:last-child {
+  margin-right: 0;
+}
+.main .more {
+  width: 2028px;
+  height: 642px;
+  background: #434343;
+  padding-top: 36px;
+}
+.main .more h1 {
+  margin-bottom: 27px;
+  color: #ffffff;
+}
+.main .more ul {
+  display: flex;
+}
+.main .more ul li {
+  margin-right: 24px;
+}
+.main .more ul li .morecard {
+  width: 624px;
+  height: 376px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+.main .more ul li .title {
+  width: 584px;
+  height: 92px;
+  margin: 16px auto 0 auto;
+}
+.main .more ul li .title h2 {
+  color: #ffffff;
+}
+.main .more ul li:last-child {
+  margin-right: 0;
+}
+.main .resources {
+  padding: 60px 0;
+  height: 260px;
+}
+.main .resources h1 {
+  margin-bottom: 33px;
+}
+.main .resources ul {
+  display: flex;
+  height: 160px;
+  width: 2131px;
+}
+.main .resources ul li {
+  width: 516px;
+  margin-right: 24px;
+  display: flex;
+}
+.main .resources ul li .circle2 {
+  margin: 40px 18px 0 20px;
+  width: 80px;
+  height: 80px;
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
+  border-radius: 80px;
+}
+.main .resources ul li .title {
+  margin-top: 12px;
+  height: 130px;
+  width: 377px;
+}
+.main .resources ul li .title .mainh3 {
+  margin-bottom: 12px;
+}
+.main .resources ul li:last-child {
+  margin-right: 0;
 }

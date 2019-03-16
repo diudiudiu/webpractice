@@ -22,7 +22,6 @@
 	background: -o-linear-gradient(to right, #F25B68, #DA628C);
 	background: linear-gradient(to right, #F25B68, #DA628C);
 }
-
 .main{
 	padding-top: 48px;
 	width: 100%;
@@ -97,8 +96,7 @@
 	}
 	.punch{
 		width: 2136px;
-		margin-left: 99px;
-		h2{
+		h1{
 			margin-bottom: 27px;
 			height: 67px;
 		}
@@ -136,6 +134,166 @@
 			}
 			li:last-child{
 				margin-left: 0;
+			}
+		}
+	}
+	.recommend{
+		width: 1704px;
+		height: 604px;
+		margin: 0 auto;
+		padding-bottom: 60px;
+		h1{
+			margin-bottom: 27px;
+		}
+		.recommendcard{
+			display: flex;
+			height: 510px;
+			&>li{
+				width: 408px;
+				margin-right: 24px;
+				.radius();
+				overflow: hidden;
+				.up{
+					height: 85px;
+					background-color: rgba(255,255,255,0.5);
+					padding: 15px 20px 0 20px;
+					h3{
+						color:@white;
+					}
+				}
+				.down1{
+					margin-top: 410px;
+					height: 85px;
+					padding: 15px 20px 0 20px;
+					background: @white;
+					
+				}
+				.down2{
+					margin-top: 410px;
+					height: 80px;
+					padding: 20px 24px 0 24px;
+					background: @white;
+					display: flex;
+					.circle1{
+						height: 60px;
+						width: 60px;
+						.radius(60px);
+						margin-right: 10px;
+					}
+					.title{
+						margin:5px 100px 0 0;
+						height: 49px;
+						width: 110px;
+					}
+					.btn{
+						margin: 14px 0;
+					}
+				}
+			}
+			&>li:first-child{
+				padding: 0 20px;
+				width: 368px;
+				.subh3:first-child{
+					margin: 27px 0 1px 0;
+				}
+				.mainh3{
+					margin-bottom: 32px;
+				}
+				ul{
+					li{
+						display: flex;
+						border-top: 1px solid @border;
+						height: 79px;
+						.circle1{
+							height: 60px;
+							width: 60px;
+							.radius(60px);
+							margin: 10px 10px 10px 0;
+						}
+						.title{
+							margin:15px 108px 0 0;
+							height: 49px;
+							width: 110px;
+						}
+						.btn{
+							margin: 24px 0;
+						}
+					}
+				}
+				.subh3:last-child{
+					margin-top: 24px;
+					text-align:center;
+					cursor: pointer;
+				}
+			}
+			&>li:last-child{
+				margin-right: 0;
+			}
+		}
+	}
+	.more{
+		width: 2028px;
+		height: 642px;
+		background: #434343;
+		padding-top: 36px;
+		h1{
+			margin-bottom: 27px; 
+			color:@white;
+		}
+		ul{
+			display: flex;
+			li{
+				margin-right: 24px;
+				.morecard{
+					width: 624px;
+					height: 376px;
+					.radius();
+				}
+				.title{
+					width: 584px;
+					height: 92px;
+					margin: 16px auto 0 auto;
+					h2{
+						color:@white;
+					}
+				}
+			}
+			li:last-child{
+				margin-right: 0;
+			}
+		}
+	}
+	.resources{
+		padding: 60px 0;
+		height: 260px;
+		h1{
+			margin-bottom: 33px;
+		}
+		ul{
+			display: flex;
+			height: 160px;
+			width: 2131px;
+			li{
+				width: 516px;
+				margin-right: 24px;
+				display: flex;
+				.circle2{
+					margin: 40px 18px 0 20px;
+					width: 80px;
+					height: 80px;
+					.radius(80px);
+				}
+				.title{
+					margin-top: 12px;
+					height: 130px;
+					width: 377px;
+					.mainh3{
+						margin-bottom: 12px;
+					}
+				}
+			}
+			li:last-child{
+				margin-right: 0;
 			}
 		}
 	}
