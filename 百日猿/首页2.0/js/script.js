@@ -39,28 +39,31 @@ window.onload=function(){
         mask.style.display="block";
     }
 
-    var iconData=[
-        '../images/个人信息Inactive.svg',
-        '../images/个人信息Hover.svg',
-        '../images/搜索Inactive.svg',
-        '../images/搜索Hover.svg',
-        '../images/导航Inactive.svg',
-        '../images/导航Hover.svg',
-        '../images/通知Inactive.svg',
-        '../images/通知Hover.svg'
-    ];
-    var bar=document.getElementById('bar');
+    var login=document.getElementById('login');
 
-    var icon=bar.getElementsByTagname('img');
 
-    for (var i = 0; i < icon.length; i++) {
-        icon[i].onmouseover=function(){
-            this.src=iconData[i*2+1];
-        }
-        icon[i].onmouseout=function(){
-            this.src=iconData[i*2];
-        }
-    }
+    // var iconData=[
+    //     '../images/个人信息Inactive.svg',
+    //     '../images/个人信息Hover.svg',
+    //     '../images/搜索Inactive.svg',
+    //     '../images/搜索Hover.svg',
+    //     '../images/导航Inactive.svg',
+    //     '../images/导航Hover.svg',
+    //     '../images/通知Inactive.svg',
+    //     '../images/通知Hover.svg'
+    // ];
+    // var bar=document.getElementById('bar');
+    // var icon=bar.getElementsByTagName('img');
+    // for (var i = 0; i < icon.length; i++) {
+    //     icon[i].onmouseover=function(){
+    //         alert(this.src);
+    //         this.src=iconData[i*2+1];
+    //         alert(this.src);
+    //     }
+    //     icon[i].onmouseout=function(){
+    //         this.src=iconData[i*2];
+    //     }
+    // }
 
 }
 

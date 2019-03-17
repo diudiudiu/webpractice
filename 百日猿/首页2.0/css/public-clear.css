@@ -91,7 +91,9 @@ body{
 .shadow{
   box-shadow: 0 15px 20px  rgba(180, 180, 180, 0.5);
 }
-
+.hide{
+  display: none;
+}
 /* color */
 /* 红 */
 .bg1{
