@@ -1,0 +1,368 @@
+@charset "utf-8";
+.box .header {
+  display: flex;
+  width: 100%;
+  height: 48px;
+}
+.box .main {
+  width: 100%;
+  height: 856px;
+  display: flex;
+}
+.box .main .project {
+  width: 408px;
+  position: relative;
+}
+.box .main .project img {
+  width: 350px;
+  height: 350px;
+  margin: 60px 58px 48px 0px;
+}
+.box .main .project .introduce {
+  margin: 0 64px 0 58px;
+  width: 286px;
+  height: 150px;
+}
+.box .main .project .introduce .mainh5 {
+  margin-bottom: 14px;
+}
+.box .main .project .introduce p {
+  color: #1A1A1A;
+  font-size: 14px;
+  line-height: 30px;
+}
+.box .main .project .button {
+  width: 48px;
+  height: 46px;
+  position: absolute;
+  bottom: 64px;
+  left: 64px;
+}
+.box .main .middle {
+  width: calc(100% - 1032px);
+  height: 856px;
+  overflow: hidden;
+}
+.box .main .middle img {
+  width: 100%;
+  height: 100%;
+}
+.box .main .LogOrReg {
+  width: 624px;
+}
+.box .main .LogOrReg .login {
+  position: relative;
+}
+.box .main .LogOrReg .login img {
+  position: absolute;
+  top: 75px;
+  left: -131px;
+  width: 503px;
+  height: 198px;
+}
+.box .main .LogOrReg .login .loginCard {
+  width: 328px;
+  height: 259px;
+  margin: 261px auto 0 auto;
+}
+.box .main .LogOrReg .login .loginCard .loginChoose {
+  margin-bottom: 42px;
+}
+.box .main .LogOrReg .login .loginCard .loginChoose .ture {
+  color: #1A1A1A;
+}
+.box .main .LogOrReg .login .loginCard .loginChoose em {
+  font-size: 24px;
+  color: #9B9B9B;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.box .main .LogOrReg .login .loginCard .loginChoose .lines {
+  height: 2px;
+  width: 235px;
+  border-radius: 2px;
+  position: relative;
+  background: #E3E3E3;
+}
+.box .main .LogOrReg .login .loginCard .loginChoose .lines .arc {
+  background: linear-gradient(to right, #f25b68, #da628c);
+}
+.box .main .LogOrReg .login .loginCard .loginChoose .lines .line1 {
+  height: 2px;
+  width: 129px;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+}
+.box .main .LogOrReg .login .loginCard .loginChoose .lines .line2 {
+  height: 2px;
+  width: 106px;
+  border-radius: 2px;
+  position: absolute;
+  right: 0;
+}
+.box .main .LogOrReg .register {
+  position: relative;
+}
+.box .main .LogOrReg .register .registerCard {
+  width: 328px;
+  height: 349px;
+  margin: 183px 0 0 88px;
+}
+.box .main .LogOrReg .register .registerCard .registerChoose {
+  margin-bottom: 42px;
+}
+.box .main .LogOrReg .register .registerCard .registerChoose .true {
+  color: #1A1A1A;
+}
+.box .main .LogOrReg .register .registerCard .registerChoose em {
+  font-size: 24px;
+  color: #9B9B9B;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.box .main .LogOrReg .register .registerCard .registerChoose .lines {
+  height: 2px;
+  width: 235px;
+  border-radius: 2px;
+  position: relative;
+  background: #E3E3E3;
+}
+.box .main .LogOrReg .register .registerCard .registerChoose .lines .arc {
+  background: linear-gradient(to right, #f25b68, #da628c);
+}
+.box .main .LogOrReg .register .registerCard .registerChoose .lines .line1 {
+  height: 2px;
+  width: 129px;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+}
+.box .main .LogOrReg .register .registerCard .registerChoose .lines .line2 {
+  height: 2px;
+  width: 106px;
+  border-radius: 2px;
+  position: absolute;
+  right: 0;
+}
+input[type="text"],
+input[type="password"] {
+  width: 316px;
+  height: 48px;
+  font-size: 20px;
+  padding-left: 12px;
+  border-radius: 5px;
+  border: 1px solid #D2D2D2;
+}
+input[type="radio"] {
+  margin-left: 49px;
+}
+#phoneNum,
+#emailNum,
+#phoneNumber,
+#phoneCode,
+#phonePass,
+#emailNumber,
+#emailCode,
+#emailPass {
+  margin-bottom: 24px;
+}
+/* 登录选项 */
+.phoneLogin,
+.emailLogin {
+  height: 184px;
+  position: relative;
+}
+.phoneLogin .sure,
+.emailLogin .sure {
+  margin: 32px auto 0 auto;
+  width: 100px;
+  height: 32px;
+  line-height: 32px;
+  color: #FFFFFF;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.phoneLogin .subh4,
+.emailLogin .subh4 {
+  position: absolute;
+  bottom: 2.5px;
+  right: 0;
+  cursor: pointer;
+}
+/*手机号注册*/
+.phoneRegister,
+.emailRegister {
+  height: 184px;
+  position: relative;
+}
+.phoneRegister .sure,
+.emailRegister .sure {
+  margin: 32px auto 0 auto;
+  width: 100px;
+  height: 32px;
+  line-height: 32px;
+  color: #FFFFFF;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.phoneRegister .subh4,
+.emailRegister .subh4 {
+  position: absolute;
+  bottom: 150.5px;
+  right: -100px;
+  cursor: pointer;
+}
+/*登陆 按钮*/
+.btns {
+  display: flex;
+  margin: 183px auto 0 auto;
+  width: 192px;
+  height: 48px;
+}
+.btns li {
+  height: 48px;
+  width: 48px;
+  border-radius: 5px;
+  margin-right: 24px;
+  cursor: pointer;
+}
+.btns li:last-child {
+  margin-right: 0;
+}
+/* 注册按钮 */
+.info {
+  margin: 153px 0 0 88px;
+  width: 242px;
+  height: 82px;
+}
+.info h5 {
+  font-size: 14px;
+}
+.info .btns1 {
+  margin-top: 14px;
+  display: flex;
+}
+.info .btns1 li {
+  height: 48px;
+  width: 48px;
+  border-radius: 5px;
+  margin-right: 24px;
+  cursor: pointer;
+}
+.info .btns1 li:last-child {
+  margin-right: 0;
+}
+/* 登录注册选择 */
+.chooseCard {
+  margin: 30px 0 0 108px;
+}
+.chooseCard .tip {
+  color: #F25b68;
+}
+.chooseCard span {
+  display: inline-block;
+  font-size: 30px;
+  margin-right: 50px;
+  color: #1A1A1A;
+  cursor: pointer;
+}
+/* 个人信息编辑 */
+.information {
+  width: 472px;
+  height: 723px;
+  margin: 40px 0 0 48px;
+  position: relative;
+}
+.information .edit {
+  font-size: 24px;
+  color: #1a1a1a;
+}
+.information .line3 {
+  width: 144px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(to right, #f25b68, #da628c);
+}
+.information .sure {
+  margin: 55px  0 0 227px;
+  width: 100px;
+  height: 32px;
+  line-height: 32px;
+  color: #FFFFFF;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.information .mainh5 {
+  position: absolute;
+  left: 362px;
+  top: 736px;
+  font-size: 20px;
+  color: #9B9B9B;
+  cursor: pointer;
+}
+.information table {
+  margin: 24px 0 0 52px;
+}
+.information table input[type="radio"]:first-child {
+  margin-left: 0;
+}
+.information table input[type="text"] {
+  width: 288px;
+  height: 40px;
+}
+.information table tr {
+  display: block;
+}
+.information table tr td span {
+  display: inline-block;
+  font-size: 20px;
+  width: 120px;
+  height: 28px;
+}
+.information table tr h5 {
+  font-size: 12px;
+  color: #9b9b9b;
+}
+.information table tr:nth-child(2) {
+  margin: 32px 0 24px 0;
+}
+.information table tr:nth-child(4) {
+  margin: 3px 0 31px 0;
+}
+.information table tr:nth-child(6) {
+  margin: 24px 0 24px 0;
+}
+.information table tr:nth-child(8) {
+  margin: 24px 0 12px 0;
+}
+.information table .cav {
+  position: relative;
+}
+.information table .cav #headIMG {
+  position: absolute;
+  left: 158px;
+  top: 46px;
+}
+.upload_pic {
+  display: block;
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  border-radius: 5px;
+  color: #434343;
+}
+.upload {
+  position: absolute;
+  font-size: 20px;
+  color: #434343;
+  left: 130px;
+  top: 50px;
+  width: 85px;
+}
