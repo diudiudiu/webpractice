@@ -277,6 +277,8 @@
 				width: 516px;
 				margin-right: 24px;
 				display: flex;
+				.radius();
+				background: @white;
 				.circle2{
 					margin: 40px 18px 0 20px;
 					width: 80px;
@@ -298,3 +300,413 @@
 		}
 	}
 }
+.header1{
+	display: flex;
+}
+.cards{
+	width: 1400px;
+	height: 708px;
+	margin: 48px auto 0 auto;
+	display: flex;
+	h3{
+		color:#ffffff;
+		margin-bottom: 14px;
+		font-size: 30px;
+	}
+	.Sleft{
+		height: 582px;
+		width: 440px;
+		margin-right: 40px;
+		ul{
+			height: 528px;
+			li{
+				margin-bottom: 12px;
+				background: #ffffff;
+				height: 96px;
+				width: 440px;
+				display: flex;
+				.radius(5px);
+				.radiuBtn{
+					height: 60px;
+					width: 60px;
+					.radius(5px);
+					margin: 18px 8px 18px 16px;
+				}
+				.mainh5{
+					margin: 34px 198px 0 0;
+
+				}
+				.subh5{
+					margin-top: 37px;
+					color:@fontgrey;
+				}
+			}
+		}
+	}
+	.Smiddle{
+		margin-right: 40px;
+		width: 440px;
+		.SMup,.SMdown{
+			height: 330px;
+			ul{
+				height: 276px;
+				li{
+					margin-bottom: 12px;
+					background: #ffffff;
+					height: 60px;
+					width: 440px;
+					display: flex;
+					.radius(5px);
+					.circleBtn{
+						height: 40px;
+						width: 40px;
+						.radius(40px);
+						margin: 10px 8px 10px 16px;
+					}
+					.mainh5{
+						margin: 16px 218px 0 0;
+
+					}
+					.subh5{
+						margin-top: 19px;
+						color:@fontgrey;
+					}
+				}
+			}
+		}
+		.SMup{
+			margin-bottom: 48px;
+		}
+	}
+	.Sright{
+		height: 690px;
+		width: 440px;
+		ul{
+			height: 636px;
+			li{
+				margin-bottom: 12px;
+				background: #ffffff;
+				height: 84px;
+				width: 440px;
+				.radius(5px);
+				
+				padding-top: 12px;
+				.mainh5{
+					margin: 0 0 22px 16px;
+				}
+				.subh4{
+					margin-left: 16px;
+					color:@fontgrey;
+				}
+			}
+		}
+	}
+
+}
+.barInactive{
+	position: relative;
+	.barCard{
+		position: absolute;
+		left: -349px;
+		top: 4px;
+		height: 332px;
+		width: 336px;
+		.radius(20px);
+		overflow: hidden;
+		background: #ffffff;
+  		box-shadow: 0 5px 15px  rgba(0, 0, 0, 0.3);
+		.cardlogo{
+			height: 60px;
+			.logoSmall{
+				margin: 10px auto; 
+			}
+		}
+		ul{
+			display: flex;
+			width: 336px;
+			flex-wrap: wrap-reverse;
+			height: 224px;
+			li{
+				width: 112px;
+				height: 112px;
+				cursor: pointer;
+				&:hover{
+					background: #F7F7F7;
+				}
+				.squareBtn{
+					width: 42px;
+					height: 42px;
+					margin:20px 35px 16px 35px;
+				}
+				h5{
+					font-size: 12px;
+					text-align: center;
+				}
+			}
+
+		}
+		.subh3{
+			width: 76px;
+			height: 24px;
+			margin: 0 auto;
+		}
+	}
+}
+.noticeInactive{
+	position: relative;
+	.noticeCard{
+		position: absolute;
+		left: -450px;
+		top: 0px;
+		.radius(20px);
+		overflow: hidden;
+		background: #ffffff;
+  		box-shadow: 0 5px 15px  rgba(0, 0, 0, 0.3);
+  		.moreNotice{
+  			height: 420px;
+			width: 440px;
+			position: relative;
+			h3{
+				padding-top: 12px;
+				margin: 0 0 8px 20px;
+				font-size: 30px;
+				color: @red;
+			}
+			ul{
+				width: 440px;
+				height: 320px;
+				padding-bottom:  40px;
+				li{
+					height: 68px;
+					position: relative;
+					border-bottom: 1px solid @border;
+					padding-top: 12px;
+					.mainh5{
+						margin: 0 0 7px 16px;
+					}
+					.subh4{
+						margin-left: 16px;
+					}
+					img{
+						position: absolute;
+						height: 15px;
+						width: 15px;
+						top: 32.5px;
+						right: 17.5px;
+						display: none;
+					}
+				}
+				li:hover{
+					background: #E3E3E3;
+				}
+				li:hover img{
+					display: block;
+				}
+			}
+			.findMore{
+				position: absolute;
+				left: 16px;
+				bottom: 10px;
+				color:@fontgrey;
+			}
+			.subh4:last-child{
+				position: absolute;
+				right: 16px;
+				bottom: 10px;
+				color: @red;
+			}
+  		}
+  		.haveNotice{
+  			height: 260px;
+			width: 440px;
+			position: relative;
+			h3{
+				padding-top: 12px;
+				margin: 0 0 8px 20px;
+				font-size: 30px;
+				color: @red;
+			}
+			ul{
+				width: 440px;
+				height: 160px;
+				padding-bottom:  40px;
+				li{
+					height: 68px;
+					position: relative;
+					border-bottom: 1px solid @border;
+					padding-top: 12px;
+					.mainh5{
+						margin: 0 0 7px 16px;
+					}
+					.subh4{
+						margin-left: 16px;
+					}
+					img{
+						position: absolute;
+						height: 15px;
+						width: 15px;
+						top: 32.5px;
+						right: 17.5px;
+						display: none;
+					}
+				}
+				li:hover{
+					background: #E3E3E3;
+				}
+				li:hover img{
+					display: block;
+				}
+			}
+			.findMore{
+				position: absolute;
+				left: 16px;
+				bottom: 10px;
+				color:@fontgrey;
+			}
+			.subh4:last-child{
+				position: absolute;
+				right: 16px;
+				bottom: 10px;
+				color: @red;
+			}
+  		}
+  		.noNotice{
+  			height: 200px;
+			width: 440px;
+			position: relative;
+			h3{
+				padding-top: 12px;
+				margin: 0 0 8px 20px;
+				font-size: 30px;
+				color: @red;
+			}
+			.noinfo{
+				position: absolute;
+				height: 28px;
+				width: 80px;
+				left: 180px;
+				top:86px;
+				color:@fontgrey;
+			}
+			.findMore{
+				position: absolute;
+				left: 16px;
+				bottom: 10px;
+				color:@fontgrey;
+			}
+  		}
+  	}
+}
+.infomateInactive{
+	position: relative;
+	.loginCards{
+		position: absolute;
+		left: -385px;
+		top: 0px;
+		.radius(20px);
+		overflow: hidden;
+		background: #ffffff;
+  		box-shadow: 0 5px 15px  rgba(0, 0, 0, 0.3);
+  		height: 397px;
+  		width: 376px;
+  		h3{
+			padding-top: 12px;
+			margin: 0 0 20px 20px;
+			font-size: 30px;
+			color: @red;
+		}
+		.btns{
+			border-top: 1px solid @border;
+			display: flex;
+			width: 376px;
+			height: 36px;
+			padding-top: 12px;
+			li{
+				height: 36px;
+				width: 36px;
+				border-radius: 5px;
+				margin-right: 8px;
+				cursor: pointer;
+			}
+			li:first-child{
+				margin-left: 24px;
+			}
+			.subh4{
+				margin-top: 6px;
+				margin-left:  176px;
+			}
+		}
+		.loginCard{
+			width: 328px;
+			height: 262px;
+			margin: 0 24px;
+
+			.loginChoose{
+				margin-bottom: 18px;
+				.ture{
+					color:#1A1A1A;
+				}
+				em{
+					font-size: 18px;
+					color:#9B9B9B;
+					margin-right: 20px;
+					cursor: pointer;
+				}
+				.lines{
+					height: 2px;
+					width: 192px;
+					border-radius: 2px;
+					position: relative;
+					background: #E3E3E3;
+					.arc{
+						background: linear-gradient(to right, #F25B68 , #DA628C);
+					}
+					.line1{
+						height: 2px;
+						width: 100px;
+						border-radius: 2px;
+						position: absolute;
+						left: 0;
+					}
+					.line2{
+						height: 2px;
+						width: 92px;
+						border-radius: 2px;
+						position: absolute;
+						right: 0;
+					}
+				}		
+			}
+		}
+	}
+}
+.phoneLogin,.emailLogin{
+	height: 184px;
+	position: relative;
+	.sure{
+		margin: 0 auto;
+		width: 120px;
+		height: 32px;
+		line-height: 32px;
+		color:#FFFFFF;
+		text-align: center;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+	.subh4{
+		position: absolute;
+		bottom: -32px;
+		right: 132px;
+		cursor: pointer;
+	}
+	input[type="text"],input[type="password"]{
+		width: 316px;
+		height:40px;
+		font-size: 20px;
+		padding-left: 12px;
+		border-radius: 5px;
+		border: 1px solid #D2D2D2;
+		margin-bottom: 24px;
+	}
+}
+

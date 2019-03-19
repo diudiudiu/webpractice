@@ -266,6 +266,10 @@
   width: 516px;
   margin-right: 24px;
   display: flex;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  background: #ffffff;
 }
 .main .resources ul li .circle2 {
   margin: 40px 18px 0 20px;
@@ -285,4 +289,435 @@
 }
 .main .resources ul li:last-child {
   margin-right: 0;
+}
+.header1 {
+  display: flex;
+}
+.cards {
+  width: 1400px;
+  height: 708px;
+  margin: 48px auto 0 auto;
+  display: flex;
+}
+.cards h3 {
+  color: #ffffff;
+  margin-bottom: 14px;
+  font-size: 30px;
+}
+.cards .Sleft {
+  height: 582px;
+  width: 440px;
+  margin-right: 40px;
+}
+.cards .Sleft ul {
+  height: 528px;
+}
+.cards .Sleft ul li {
+  margin-bottom: 12px;
+  background: #ffffff;
+  height: 96px;
+  width: 440px;
+  display: flex;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.cards .Sleft ul li .radiuBtn {
+  height: 60px;
+  width: 60px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin: 18px 8px 18px 16px;
+}
+.cards .Sleft ul li .mainh5 {
+  margin: 34px 198px 0 0;
+}
+.cards .Sleft ul li .subh5 {
+  margin-top: 37px;
+  color: #9b9b9b;
+}
+.cards .Smiddle {
+  margin-right: 40px;
+  width: 440px;
+}
+.cards .Smiddle .SMup,
+.cards .Smiddle .SMdown {
+  height: 330px;
+}
+.cards .Smiddle .SMup ul,
+.cards .Smiddle .SMdown ul {
+  height: 276px;
+}
+.cards .Smiddle .SMup ul li,
+.cards .Smiddle .SMdown ul li {
+  margin-bottom: 12px;
+  background: #ffffff;
+  height: 60px;
+  width: 440px;
+  display: flex;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.cards .Smiddle .SMup ul li .circleBtn,
+.cards .Smiddle .SMdown ul li .circleBtn {
+  height: 40px;
+  width: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  border-radius: 40px;
+  margin: 10px 8px 10px 16px;
+}
+.cards .Smiddle .SMup ul li .mainh5,
+.cards .Smiddle .SMdown ul li .mainh5 {
+  margin: 16px 218px 0 0;
+}
+.cards .Smiddle .SMup ul li .subh5,
+.cards .Smiddle .SMdown ul li .subh5 {
+  margin-top: 19px;
+  color: #9b9b9b;
+}
+.cards .Smiddle .SMup {
+  margin-bottom: 48px;
+}
+.cards .Sright {
+  height: 690px;
+  width: 440px;
+}
+.cards .Sright ul {
+  height: 636px;
+}
+.cards .Sright ul li {
+  margin-bottom: 12px;
+  background: #ffffff;
+  height: 84px;
+  width: 440px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding-top: 12px;
+}
+.cards .Sright ul li .mainh5 {
+  margin: 0 0 22px 16px;
+}
+.cards .Sright ul li .subh4 {
+  margin-left: 16px;
+  color: #9b9b9b;
+}
+.barInactive {
+  position: relative;
+}
+.barInactive .barCard {
+  position: absolute;
+  left: -349px;
+  top: 4px;
+  height: 332px;
+  width: 336px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.barInactive .barCard .cardlogo {
+  height: 60px;
+}
+.barInactive .barCard .cardlogo .logoSmall {
+  margin: 10px auto;
+}
+.barInactive .barCard ul {
+  display: flex;
+  width: 336px;
+  flex-wrap: wrap-reverse;
+  height: 224px;
+}
+.barInactive .barCard ul li {
+  width: 112px;
+  height: 112px;
+  cursor: pointer;
+}
+.barInactive .barCard ul li:hover {
+  background: #F7F7F7;
+}
+.barInactive .barCard ul li .squareBtn {
+  width: 42px;
+  height: 42px;
+  margin: 20px 35px 16px 35px;
+}
+.barInactive .barCard ul li h5 {
+  font-size: 12px;
+  text-align: center;
+}
+.barInactive .barCard .subh3 {
+  width: 76px;
+  height: 24px;
+  margin: 0 auto;
+}
+.noticeInactive {
+  position: relative;
+}
+.noticeInactive .noticeCard {
+  position: absolute;
+  left: -450px;
+  top: 0px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.noticeInactive .noticeCard .moreNotice {
+  height: 420px;
+  width: 440px;
+  position: relative;
+}
+.noticeInactive .noticeCard .moreNotice h3 {
+  padding-top: 12px;
+  margin: 0 0 8px 20px;
+  font-size: 30px;
+  color: #f25b68;
+}
+.noticeInactive .noticeCard .moreNotice ul {
+  width: 440px;
+  height: 320px;
+  padding-bottom: 40px;
+}
+.noticeInactive .noticeCard .moreNotice ul li {
+  height: 68px;
+  position: relative;
+  border-bottom: 1px solid #d2d2d2;
+  padding-top: 12px;
+}
+.noticeInactive .noticeCard .moreNotice ul li .mainh5 {
+  margin: 0 0 7px 16px;
+}
+.noticeInactive .noticeCard .moreNotice ul li .subh4 {
+  margin-left: 16px;
+}
+.noticeInactive .noticeCard .moreNotice ul li img {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  top: 32.5px;
+  right: 17.5px;
+  display: none;
+}
+.noticeInactive .noticeCard .moreNotice ul li:hover {
+  background: #E3E3E3;
+}
+.noticeInactive .noticeCard .moreNotice ul li:hover img {
+  display: block;
+}
+.noticeInactive .noticeCard .moreNotice .findMore {
+  position: absolute;
+  left: 16px;
+  bottom: 10px;
+  color: #9b9b9b;
+}
+.noticeInactive .noticeCard .moreNotice .subh4:last-child {
+  position: absolute;
+  right: 16px;
+  bottom: 10px;
+  color: #f25b68;
+}
+.noticeInactive .noticeCard .haveNotice {
+  height: 260px;
+  width: 440px;
+  position: relative;
+}
+.noticeInactive .noticeCard .haveNotice h3 {
+  padding-top: 12px;
+  margin: 0 0 8px 20px;
+  font-size: 30px;
+  color: #f25b68;
+}
+.noticeInactive .noticeCard .haveNotice ul {
+  width: 440px;
+  height: 160px;
+  padding-bottom: 40px;
+}
+.noticeInactive .noticeCard .haveNotice ul li {
+  height: 68px;
+  position: relative;
+  border-bottom: 1px solid #d2d2d2;
+  padding-top: 12px;
+}
+.noticeInactive .noticeCard .haveNotice ul li .mainh5 {
+  margin: 0 0 7px 16px;
+}
+.noticeInactive .noticeCard .haveNotice ul li .subh4 {
+  margin-left: 16px;
+}
+.noticeInactive .noticeCard .haveNotice ul li img {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  top: 32.5px;
+  right: 17.5px;
+  display: none;
+}
+.noticeInactive .noticeCard .haveNotice ul li:hover {
+  background: #E3E3E3;
+}
+.noticeInactive .noticeCard .haveNotice ul li:hover img {
+  display: block;
+}
+.noticeInactive .noticeCard .haveNotice .findMore {
+  position: absolute;
+  left: 16px;
+  bottom: 10px;
+  color: #9b9b9b;
+}
+.noticeInactive .noticeCard .haveNotice .subh4:last-child {
+  position: absolute;
+  right: 16px;
+  bottom: 10px;
+  color: #f25b68;
+}
+.noticeInactive .noticeCard .noNotice {
+  height: 200px;
+  width: 440px;
+  position: relative;
+}
+.noticeInactive .noticeCard .noNotice h3 {
+  padding-top: 12px;
+  margin: 0 0 8px 20px;
+  font-size: 30px;
+  color: #f25b68;
+}
+.noticeInactive .noticeCard .noNotice .noinfo {
+  position: absolute;
+  height: 28px;
+  width: 80px;
+  left: 180px;
+  top: 86px;
+  color: #9b9b9b;
+}
+.noticeInactive .noticeCard .noNotice .findMore {
+  position: absolute;
+  left: 16px;
+  bottom: 10px;
+  color: #9b9b9b;
+}
+.infomateInactive {
+  position: relative;
+}
+.infomateInactive .loginCards {
+  position: absolute;
+  left: -385px;
+  top: 0px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  height: 397px;
+  width: 376px;
+}
+.infomateInactive .loginCards h3 {
+  padding-top: 12px;
+  margin: 0 0 20px 20px;
+  font-size: 30px;
+  color: #f25b68;
+}
+.infomateInactive .loginCards .btns {
+  border-top: 1px solid #d2d2d2;
+  display: flex;
+  width: 376px;
+  height: 36px;
+  padding-top: 12px;
+}
+.infomateInactive .loginCards .btns li {
+  height: 36px;
+  width: 36px;
+  border-radius: 5px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+.infomateInactive .loginCards .btns li:first-child {
+  margin-left: 24px;
+}
+.infomateInactive .loginCards .btns .subh4 {
+  margin-top: 6px;
+  margin-left: 176px;
+}
+.infomateInactive .loginCards .loginCard {
+  width: 328px;
+  height: 262px;
+  margin: 0 24px;
+}
+.infomateInactive .loginCards .loginCard .loginChoose {
+  margin-bottom: 18px;
+}
+.infomateInactive .loginCards .loginCard .loginChoose .ture {
+  color: #1A1A1A;
+}
+.infomateInactive .loginCards .loginCard .loginChoose em {
+  font-size: 18px;
+  color: #9B9B9B;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.infomateInactive .loginCards .loginCard .loginChoose .lines {
+  height: 2px;
+  width: 192px;
+  border-radius: 2px;
+  position: relative;
+  background: #E3E3E3;
+}
+.infomateInactive .loginCards .loginCard .loginChoose .lines .arc {
+  background: linear-gradient(to right, #f25b68, #da628c);
+}
+.infomateInactive .loginCards .loginCard .loginChoose .lines .line1 {
+  height: 2px;
+  width: 100px;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+}
+.infomateInactive .loginCards .loginCard .loginChoose .lines .line2 {
+  height: 2px;
+  width: 92px;
+  border-radius: 2px;
+  position: absolute;
+  right: 0;
+}
+.phoneLogin,
+.emailLogin {
+  height: 184px;
+  position: relative;
+}
+.phoneLogin .sure,
+.emailLogin .sure {
+  margin: 0 auto;
+  width: 120px;
+  height: 32px;
+  line-height: 32px;
+  color: #FFFFFF;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.phoneLogin .subh4,
+.emailLogin .subh4 {
+  position: absolute;
+  bottom: -32px;
+  right: 132px;
+  cursor: pointer;
+}
+.phoneLogin input[type="text"],
+.emailLogin input[type="text"],
+.phoneLogin input[type="password"],
+.emailLogin input[type="password"] {
+  width: 316px;
+  height: 40px;
+  font-size: 20px;
+  padding-left: 12px;
+  border-radius: 5px;
+  border: 1px solid #D2D2D2;
+  margin-bottom: 24px;
 }

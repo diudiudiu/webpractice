@@ -28,44 +28,103 @@ window.onload=function(){
     changeAlign(find,resources,"marginLeft");
     changeAlign(find,more,"marginLeft");
 
-    /*  幕布 打开 */
+    // /*  幕布 打开 */
     var close=document.getElementById('close');
-    var card1=document.getElementById('card1');
+    // var card1=document.getElementById('card1');
     var mask=document.getElementById('mask');
     close.onclick=function(){
         mask.style.display="none";
     }
-    card1.onclick=function(){
-        mask.style.display="block";
-    }
-
-    var login=document.getElementById('login');
-
-
-    // var iconData=[
-    //     '../images/个人信息Inactive.svg',
-    //     '../images/个人信息Hover.svg',
-    //     '../images/搜索Inactive.svg',
-    //     '../images/搜索Hover.svg',
-    //     '../images/导航Inactive.svg',
-    //     '../images/导航Hover.svg',
-    //     '../images/通知Inactive.svg',
-    //     '../images/通知Hover.svg'
-    // ];
-    // var bar=document.getElementById('bar');
-    // var icon=bar.getElementsByTagName('img');
-    // for (var i = 0; i < icon.length; i++) {
-    //     icon[i].onmouseover=function(){
-    //         alert(this.src);
-    //         this.src=iconData[i*2+1];
-    //         alert(this.src);
-    //     }
-    //     icon[i].onmouseout=function(){
-    //         this.src=iconData[i*2];
-    //     }
+    // card1.onclick=function(){
+    //     mask.style.display="block";
     // }
 
+    /* 登陆  邮箱手机声明*/
+    var phone=document.getElementById('phone');
+    var email=document.getElementById('email');
+
+    var loginChoose=document.getElementById('loginChoose');
+    var line1=loginChoose.getElementsByClassName("line1");
+    var line2=loginChoose.getElementsByClassName("line2");
+    var phoneLogin=document.getElementById('phoneLogin');
+    var emailLogin=document.getElementById('emailLogin');
+    /* 登陆 邮箱手机切换 */
+    phone.onclick=function(){
+        this.className="true";
+        email.className="";
+        phoneLogin.className="phoneLogin";
+        emailLogin.className="emailLogin hide";
+        line1[0].className="line1 arc";
+        line2[0].className="line2";
+    }
+    email.onclick=function(){
+    this.className="true";
+        phone.className="";
+        phoneLogin.className="phoneLogin hide";
+        emailLogin.className="emailLogin";
+        line1[0].className="line1";
+        line2[0].className="line2 arc";
+    }
+
+
+
+    /* 打卡的横向滚动*/
+    var punchcard=document.getElementById('punchcard');
+    var li=punchcard.getElementsByTagName('li');
+    punchcard.onmousewheel=function(e){
+        MouseWheel(e);
+        var width=534*li.length;
+        var value=scrollFunc();
+        changeMargin(li[0],"marginLeft",value,width-1700);
+    }
+    /* 更多的横向滚动 */
+    var moreAndMore=document.getElementById('moreAndMore');
+    var li1=moreAndMore.getElementsByTagName('li');
+    moreAndMore.onmousewheel=function(e){
+        MouseWheel(e);
+        var width=648*li.length;
+        var value=scrollFunc();
+        changeMargin(li1[0],"marginLeft",value,width-2400);
+    }
+    /* 资源横向滚动 */
+    
+    var resourceCard=document.getElementById('resourceCard');
+    var li2=resourceCard.getElementsByTagName('li');
+    resourceCard.onmousewheel=function(e){
+        MouseWheel(e);
+        var width=648*li.length;
+        var value=scrollFunc();
+        changeMargin(li2[0],"marginLeft",value,width-2200);
+    }
 }
+
+
+
+
+
+window.onmousewheel=function(){
+    var top = document.body.scrollTop||document.documentElement.scrollTop;
+    var logoSmall=document.getElementById('logoSmall');
+    var functionBar1=document.getElementById('functionBar1');
+    var bar=document.getElementById('bar');
+    if (top>=100) {
+        bar.className="bar hide";
+        functionBar1.className="";
+        logoSmall.className="";
+    }else if(top<100){
+        bar.className="bar";
+        functionBar1.className="hide";
+        logoSmall.className="hide";
+    }
+}
+
+
+
+
+
+
+
+
 
 window.onresize=function(){  
 
@@ -178,3 +237,48 @@ window.onresize=function(){
         else
             return null;
     }
+    
+            
+    function scrollFunc(e) {
+        // e是FF的事件。window.event是chrome/ie/opera的事件
+        var ee = e || window.event;
+        var value;
+         console.log(ee); //可以看看ee.wheelDelta和e.detail在浏览器中的值；
+        if(ee.wheelDelta) { //IE/Opera/Chrome   
+            value = ee.wheelDelta;
+        } else if(ee.detail) { //Firefox    
+            value = ee.detail;
+        }
+        return value;
+    }
+    //用firefox变量表示火狐代理
+    var firefox = navigator.userAgent.indexOf('Firefox') != -1;
+    function MouseWheel(e){//阻止事件冒泡和默认行为的完整兼容性代码
+        e = e||window.event;
+        if (e.stopPropagation) {//这是取消冒泡
+            e.stopPropagation();
+        } else{
+            e.cancelBubble = true;
+        };
+        if (e.preventDefault) {//这是取消默认行为，要弄清楚取消默认行为和冒泡不是一回事
+            e.preventDefault();
+        } else{
+            e.returnValue = false;
+        };
+    }
+    function changeMargin(obj1,style,value,width){             
+    　　var leftValue=getObjStyle(obj1,style);
+        var index=leftValue.indexOf('px');
+        leftValue=leftValue.slice(0,index);
+        if (parseFloat(leftValue)+value>0) {
+            obj1.style.marginLeft=0;
+        }else if(parseFloat(leftValue)+value<-width){
+            obj1.style.marginLeft=-width+"px";
+        }else{
+            obj1.style.marginLeft=(parseFloat(leftValue)+value)+"px";
+        }
+    }
+    // var con = document.getElementById('content');//要在content内部滚动，而页面不受影响，所以这里获取要滚动的对象
+    // //如果是ff就绑定DOMMouseScroll事件，其他浏览器就用onmousewheel事件触发
+    // firefox ? con.addEventListener('DOMMouseScroll',MouseWheel,false) : (con.onmousewheel = MouseWheel);
+    
