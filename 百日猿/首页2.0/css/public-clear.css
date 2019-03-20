@@ -145,7 +145,7 @@ body{
   display:none;
   height:100%;
   width:100%;
-  z-index: 1999;
+  z-index: 2001;
 }
 
 .searchBar{
@@ -213,16 +213,16 @@ body{
 /*  bar  */
 .bar{
   position: absolute;
-  right: 0px;
+  right: 25px;
   top: 0px;
-  padding: 10px 25px;
 }
 .funcSysbol {
-  height: 60px;
+  height: 40px;
   width: 40px;
   cursor: pointer;
+  padding: 10px 0;
 }
-.funcSysbol img{
+.funcSysbol .iconImg{
   height: 40px;
   width: 40px;
 }
@@ -316,7 +316,7 @@ body{
 }
 .logoSmall img:last-child {
   width: 101px;
-  margin: 4px 26px 4px 0;
+  margin: 4px 0;
 }
 .functionBar1 {
   padding-left: 32px;
@@ -325,9 +325,51 @@ body{
   padding-right: 18px;
   display: flex;
 }
-.functionBar1 img {
+.functionBar1 .icon {
+  margin-top: 8px;
+  margin-left:18px;
+  padding-bottom: 8px;
+  cursor: pointer;
+}
+.funcsearch{
   width: 32px;
   height: 32px;
-  margin: 8px 0 8px 18px;
-  vertical-align: bottom;
+  background: url(../images/导出3.png) no-repeat -40px 0px;
+}
+.funcnotice{
+  width: 32px;
+  height: 32px;
+  position: relative;
+  background: url(../images/导出3.png) no-repeat -84px 0;
+}
+.funcnotice>span{
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 16px;
+  text-align: center;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background: -webkit-linear-gradient(to right, #f25b68, #da628c);
+  background: -o-linear-gradient(to right, #f25b68, #da628c);
+  background: linear-gradient(to right, #f25b68, #da628c);
+  color: #ffffff;
+  font-size: 12px;
+  right: -6px;
+  top: -5px;
+}
+.funcinfo{
+  width: 32px;
+  height: 32px;
+  background: url(../images/导出3.png) no-repeat -125px 0;
+}
+.funcnotice:hover{
+  background: url(../images/导出3.png) no-repeat -84px -42px;
+}
+.funcinfo:hover{
+  background: url(../images/导出3.png) no-repeat -125px -42px;
+}
+.funcsearch:hover{
+  background: url(../images/导出3.png) no-repeat -40px -42px;
 }

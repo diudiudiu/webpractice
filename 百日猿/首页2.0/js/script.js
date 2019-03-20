@@ -1,4 +1,5 @@
 window.onload=function(){
+
     /*  进度条声明 */
 	var canvas = document.getElementById("canvas");
     var context = canvas.getContext('2d');
@@ -28,16 +29,7 @@ window.onload=function(){
     changeAlign(find,resources,"marginLeft");
     changeAlign(find,more,"marginLeft");
 
-    // /*  幕布 打开 */
-    var close=document.getElementById('close');
-    // var card1=document.getElementById('card1');
-    var mask=document.getElementById('mask');
-    close.onclick=function(){
-        mask.style.display="none";
-    }
-    // card1.onclick=function(){
-    //     mask.style.display="block";
-    // }
+    
 
     /* 登陆  邮箱手机声明*/
     var phone=document.getElementById('phone');
@@ -66,25 +58,46 @@ window.onload=function(){
         line2[0].className="line2 arc";
     }
 
-
+    function clearPX(value){
+        var index=value.indexOf('px');
+        var Value=parseFloat(value.slice(0,index));
+        return Value;
+    }
 
     /* 打卡的横向滚动*/
     var punchcard=document.getElementById('punchcard');
     var li=punchcard.getElementsByTagName('li');
+    var screenWidth=document.body.offsetWidth;
+
     punchcard.onmousewheel=function(e){
         MouseWheel(e);
-        var width=534*li.length;
+
+        var liWidth=li[0].offsetWidth;
+
+        var liMR=clearPX(getObjStyle(li[0],"marginRight"));
+        var Mleft=clearPX(getObjStyle(find,"marginLeft"));
+        var widths=liWidth+liMR;
+
+        var width=widths*li.length-screenWidth+Mleft;
         var value=scrollFunc();
-        changeMargin(li[0],"marginLeft",value,width-1700);
+        changeMargin(li[0],"marginLeft",value,width);
+
     }
     /* 更多的横向滚动 */
     var moreAndMore=document.getElementById('moreAndMore');
     var li1=moreAndMore.getElementsByTagName('li');
     moreAndMore.onmousewheel=function(e){
         MouseWheel(e);
-        var width=648*li.length;
+
+       var liWidth=li1[0].offsetWidth;
+
+        var liMR=clearPX(getObjStyle(li1[0],"marginRight"));
+        var Mleft=clearPX(getObjStyle(find,"marginLeft"));
+        var widths=liWidth+liMR;
+
+        var width=widths*li1.length-screenWidth+Mleft;
         var value=scrollFunc();
-        changeMargin(li1[0],"marginLeft",value,width-2400);
+        changeMargin(li1[0],"marginLeft",value,width);
     }
     /* 资源横向滚动 */
     
@@ -92,42 +105,302 @@ window.onload=function(){
     var li2=resourceCard.getElementsByTagName('li');
     resourceCard.onmousewheel=function(e){
         MouseWheel(e);
-        var width=648*li.length;
+        var liWidth=li2[0].offsetWidth;
+
+        var liMR=clearPX(getObjStyle(li2[0],"marginRight"));
+        var Mleft=clearPX(getObjStyle(find,"marginLeft"));
+        var widths=liWidth+liMR;
+
+        var width=widths*li2.length-screenWidth+Mleft;
+
         var value=scrollFunc();
-        changeMargin(li2[0],"marginLeft",value,width-2200);
+        changeMargin(li2[0],"marginLeft",value,width);
+    }
+
+
+
+    /* 用户卡片 */
+
+    var userClass=document.getElementsByClassName("userClass");
+    var userLis=userClass[0].getElementsByTagName('li');
+    var userCard=document.getElementsByClassName('userCard');
+    var usercard=userCard[0].getElementsByClassName('users');
+    for (var i = 0; i < userLis.length; i++) {
+        userLis[i].index=i;
+        userLis[i].onclick=function(){
+
+            for (var i = 0; i < userLis.length; i++) {
+                userLis[i].className='';
+                usercard[i].className="users hide";
+            }
+            this.className='active';
+            usercard[this.index].className="users";
+        }
+    }
+
+    var userLis1=userClass[1].getElementsByTagName('li');
+
+    var usercard1=userCard[1].getElementsByClassName('users');
+    for (var i = 0; i < userLis1.length; i++) {
+        userLis1[i].index=i;
+        userLis1[i].onclick=function(){
+
+            for (var i = 0; i < userLis1.length; i++) {
+                userLis1[i].className='';
+                usercard1[i].className="users hide";
+            }
+            this.className='active';
+            usercard1[this.index].className="users";
+        }
+    }
+
+    /*  barIcon 效果 */
+    var barInactive=document.getElementsByClassName('barInactive');
+    var barCard=document.getElementsByClassName(' barCard');
+    barInactive[0].onmouseover=function(){
+        block(barCard[0]);
+        barCard[0].style.zIndex=1000;
+        noticeCard[1].style.zIndex=998;
+        userCard[1].style.zIndex=998;
+        loginCards[1].style.zIndex=998;
+    }
+    barInactive[0].onmouseout=function(){
+        none(barCard[0]);
+        barCard[0].style.zIndex=-3;
+        noticeCard[1].style.zIndex=-2;
+        userCard[1].style.zIndex=-1;
+        loginCards[1].style.zIndex=-1;
+    }
+
+    /* searchInactive */
+    var searchInactive=document.getElementsByClassName('searchInactive');
+    /*  幕布 打开 */
+    var close=document.getElementById('close');
+    var mask=document.getElementById('mask');
+    close.onclick=function(){
+        mask.style.display="none";
+    }
+    searchInactive[0].onclick=function(){
+        mask.style.display="block";
+    }
+
+    /* 此处有个通知的数据个数 需要数据库信息 */
+    var noticeNum=3;
+    var funcnotice=document.getElementsByClassName("funcnotice");
+    var span=funcnotice[0].getElementsByTagName('span')[0];
+    span.innerHTML=noticeNum;
+    var funcnotice=document.getElementsByClassName("noticeImg");
+    var span1=funcnotice[0].getElementsByTagName('span')[0];
+    span1.innerHTML=noticeNum;
+    /*noticeInactive*/
+
+    var noticeInactive=document.getElementsByClassName('noticeInactive');
+    var noticeCard=document.getElementsByClassName('noticeCard');
+    cutTab(noticeNum);
+    
+    noticeInactive[0].onmouseover=function(){
+        block(noticeCard[1]);
+        barCard[0].style.zIndex=998;
+        noticeCard[1].style.zIndex=1000;
+        userCard[1].style.zIndex=998;
+        loginCards[1].style.zIndex=998;
+    }
+    noticeInactive[0].onmouseout=function(){
+        none(noticeCard[1]);
+        barCard[0].style.zIndex=-2000;
+        noticeCard[1].style.zIndex=-3000;
+        userCard[1].style.zIndex=-1100;
+        loginCards[1].style.zIndex=-1100;
+    }
+    /* 如果数字大于1小于4*/
+    var haveNotice=document.getElementsByClassName('haveNotice');
+    /* img 删除节点 */
+    var imgclose=haveNotice[0].getElementsByTagName('img');
+    for (var i = 0; i < imgclose.length; i++) {
+        imgclose[i].onclick=removeNotice;
+    }
+    /* 个人信息卡片 */
+    /* infomateInactive */ 
+    /* 未登录 */
+    var infomateInactive=document.getElementsByClassName('infomateInactive');
+    var loginCards=document.getElementsByClassName('loginCards');
+    /*  登录信息  */
+
+    var userCard=document.getElementsByClassName('userCard');
+    var temp=1;
+    infomateInactive[0].onmouseover=function(){
+        if (temp) {
+            block(userCard[1]);
+            barCard[0].style.zIndex=998;
+            noticeCard[1].style.zIndex=998;
+            userCard[1].style.zIndex=1000;
+            loginCards[1].style.zIndex=998;
+            loginCards[1].className="loginCards hide";
+        }else{
+            block(loginCards[1]);
+            barCard[0].style.zIndex=1000;
+            userCard[1].style.zIndex=998;
+            noticeCard[1].style.zIndex=998;
+            loginCards[1].style.zIndex=998;
+            userCard[1].className="userCard hide";
+        } 
+    }
+    infomateInactive[0].onmouseout=function(){
+        none(loginCards[1]);
+        none(userCard[1]);
+        barCard[0].style.zIndex=-3;
+        userCard[1].style.zIndex=-1;
+        noticeCard[1].style.zIndex=-2;
+        loginCards[1].style.zIndex=-1;
+    }
+    /* fixed 导航图标交互 */
+    var functionBar1=document.getElementsByClassName("functionBar1")[0];
+
+    var icon=functionBar1.getElementsByClassName('icon');
+    icon[0].onclick=function(){
+        mask.style.display="block";
+    }
+
+    icon[1].onmouseover=function(){
+        block(noticeCard[0]);
+        noticeCard[0].style.zIndex=1000;
+        userCard[0].style.zIndex=997;
+    }
+    icon[1].onmouseout=function(){
+        none(noticeCard[0]);
+        noticeCard[0].style.zIndex=-1;
+        userCard[0].style.zIndex=-3;
+    }
+    icon[2].onmouseover=function(){
+        block(userCard[0]);
+        noticeCard[0].style.zIndex=997;
+        userCard[0].style.zIndex=1000;
+    }
+    icon[2].onmouseout=function(){
+        none(userCard[0]);
+        noticeCard[0].style.zIndex=-1;
+        userCard[0].style.zIndex=-3;
+    }
+
+
+    var clear=document.getElementsByClassName('clearAll');
+    for (var i = 0; i < clear.length; i++) {
+        clear[i].onclick=function(){
+            cutTab(0);
+        }
+    }
+}
+
+/* 通知的节点的建立 */
+function creatNotice(card,num){
+    var oul=card.getElementsByTagName('ul');
+    var spanNum=card.getElementsByTagName('span');
+    oul[0].style.height=num*80+'px';
+    spanNum[0].innerHTML=num;
+    if(oul[0].getElementsByTagName('li').length==0){
+        for (var i = 0; i < num; i++) {
+            var oli=document.createElement("li");
+            oli.innerHTML="<h5 class='mainh5'>标题H5</h5><h4 class='subh4'>副标题</h4><img src='images/取消按钮.svg' alt=''>";
+            oul[0].appendChild(oli);
+        }
+    }
+}
+function removeNotice(){
+    var li=this.parentNode.parentNode.removeChild(this.parentNode);
+    var haveNotice=document.getElementsByClassName('haveNotice');
+    var card=haveNotice[0];
+    var oul=card.getElementsByTagName('ul');
+    var spanNum=card.getElementsByTagName('span');
+    num=parseInt(spanNum[0].innerHTML)-1;
+    spanNum[0].innerHTML=num;
+    if (num==0) {
+        cutTab(0);
+    }
+    oul[0].style.height=num*80+'px';
+}
+
+/* 通过通知数量获取卡片 */
+function cutTab(num){
+    var moreNotice=document.getElementsByClassName('moreNotice');
+    var haveNotice=document.getElementsByClassName('haveNotice');
+    var noNotice=document.getElementsByClassName('noNotice');
+    if (num>=4) {
+        moreNotice[0].className="moreNotice";
+        haveNotice[0].className="haveNotice hide";
+        noNotice[0].className="noNotice hide";
+
+        moreNotice[1].className="moreNotice";
+        haveNotice[1].className="haveNotice hide";
+        noNotice[1].className="noNotice hide";
+    }else if(num>=1&&num<4){
+        creatNotice(haveNotice[0],num);
+
+        moreNotice[0].className="moreNotice hide";
+        haveNotice[0].className="haveNotice";
+        noNotice[0].className="noNotice hide"; 
+
+        creatNotice(haveNotice[1],num);
+        moreNotice[1].className="moreNotice hide";
+        haveNotice[1].className="haveNotice";
+        noNotice[1].className="noNotice hide"; 
+    }else{
+        moreNotice[0].className="moreNotice hide";
+        haveNotice[0].className="haveNotice hide";
+        noNotice[0].className="noNotice";
+
+        moreNotice[1].className="moreNotice hide";
+        haveNotice[1].className="haveNotice hide";
+        noNotice[1].className="noNotice";
     }
 }
 
 
 
 
-
-window.onmousewheel=function(){
+/* 滚动的导航条效果 */
+window.onscroll=function(){
+    var width=document.body.clientWidth;
+    console.log(width);
     var top = document.body.scrollTop||document.documentElement.scrollTop;
     var logoSmall=document.getElementById('logoSmall');
     var functionBar1=document.getElementById('functionBar1');
     var bar=document.getElementById('bar');
-    if (top>=100) {
-        bar.className="bar hide";
-        functionBar1.className="";
-        logoSmall.className="";
-    }else if(top<100){
-        bar.className="bar";
-        functionBar1.className="hide";
-        logoSmall.className="hide";
+    var header1=document.getElementsByClassName('header1');
+    if (top>=192) {
+        block(functionBar1,logoSmall);
+        none(bar);
+        header1[0].className="header1 fixed"
+    }else if(top<192){
+        block(bar);
+        none(functionBar1,logoSmall);
+        header1[0].className="header1"
     }
 }
 
 
 
 
+/* 淡入 */
+function block(){
+    for(var i=0;i<arguments.length;i++){
+        // arguments[i].style.display="block";
+        arguments[i].style.opacity="1";
+    }
+}
+/* 淡出 */
+function none(){
+    for(var i=0;i<arguments.length;i++){
+        
+        arguments[i].style.opacity="0";
+        // arguments[i].style.display="none";
+    }
+}
 
-
+/*  */
 
 
 
 window.onresize=function(){  
-
     var punch=document.getElementById('punch');
     var find=document.getElementById('find');
     var resources=document.getElementById("resources");
@@ -243,7 +516,7 @@ window.onresize=function(){
         // e是FF的事件。window.event是chrome/ie/opera的事件
         var ee = e || window.event;
         var value;
-         console.log(ee); //可以看看ee.wheelDelta和e.detail在浏览器中的值；
+         // console.log(ee); //可以看看ee.wheelDelta和e.detail在浏览器中的值；
         if(ee.wheelDelta) { //IE/Opera/Chrome   
             value = ee.wheelDelta;
         } else if(ee.detail) { //Firefox    

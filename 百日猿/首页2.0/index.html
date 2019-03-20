@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>百日猿</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
 	<link rel="stylesheet" type="text/css" href="css/public-clear.css"/>
@@ -137,7 +138,7 @@
 				</div>
 			</div>
 			<div class="header1">
-				<div id="logoSmall" class="hide">	
+				<div id="logoSmall">	
 					<div class="logoSmall" id="">
 						<img src="images/ddd.JPG" alt="">
 						<img src="images/ddd.JPG" alt="">
@@ -153,19 +154,220 @@
 				  	<li><a href="">打卡</a></li> 
 				  	<li><a href="">注册/登录</a></li> 
 				</ul>
-				<div id="functionBar1" class="hide">	
+				<div id="functionBar1">	
 					<div class="functionBar1">
-						<img src="images/搜索Inactive.svg" alt="搜索">
-						<img src="images/通知Inactive.svg" alt="通知">
-						<img src="images/个人信息Inactive.svg" alt="个人信息">
+						<div class="icon funcsearch">
+
+						</div>
+						<div class="icon funcnotice">
+							<span>3</span>
+							<ul class="noticeCard">
+								<li class="moreNotice">
+									<h3>通知（<span>4</span>）</h3>
+									<ul>
+										<li>
+											<h5 class="mainh5">标题H5</h5>
+											<h4 class="subh4">副标题</h4>
+											<img src="images/取消按钮.svg" alt="">
+										</li>
+										<li>
+											<h5 class="mainh5">标题H5</h5>
+											<h4 class="subh4">副标题</h4>
+											<img src="images/取消按钮.svg" alt="">
+										</li>
+										<li>
+											<h5 class="mainh5">标题H5</h5>
+											<h4 class="subh4">副标题</h4>
+											<img src="images/取消按钮.svg" alt="">
+										</li>
+										<li>
+											<h5 class="mainh5">标题H5</h5>
+											<h4 class="subh4">副标题</h4>
+											<img src="images/取消按钮.svg" alt="">
+										</li>
+									</ul>
+									<h4 class="subh4 findMore">查看更多</h4>
+									<h4 class="subh4 clearAll">清除所有</h4>
+								</li>
+								<li class="haveNotice hide">
+									<h3>通知（<span>2</span>）</h3>
+									<ul>
+										<!-- <li>
+											<h5 class="mainh5">标题H5</h5>
+											<h4 class="subh4">副标题</h4>
+											<img src="images/取消按钮.svg" alt="">
+										</li>
+										<li>
+											<h5 class="mainh5">标题H5</h5>
+											<h4 class="subh4">副标题</h4>
+											<img src="images/取消按钮.svg" alt="">
+										</li> -->
+									</ul>
+									<h4 class="subh4 findMore">查看更多</h4>
+									<h4 class="subh4 clearAll">清除所有</h4>
+								</li>
+								<li class="noNotice hide">
+									<h3>通知</h3>
+									<h5 class="mainh5 noinfo">暂无通知</h5>
+									<h4 class="subh4 findMore">查看更多</h4>
+								</li>
+							</ul>
+						</div>
+						<div class="icon funcinfo">
+							<ul class="loginCards">
+								<li class="">
+									<h3>登录</h3>
+									<ul class="loginCard">
+										<li class="loginChoose" id="loginChoose">
+											<em class="ture" id="phone">手机号登录</em>
+											<em id="email">邮箱登录</em>
+											<div class="lines">
+												<div class="line1 arc"></div>
+												<div class="line2"></div>
+											</div>
+										</li>
+										<li id="phoneLogin" class="phoneLogin">
+											<form action="" method="">
+												<input type="text" id="phoneNum" placeholder="请输入手机号">
+
+												<input type="password" id="phonePassword" placeholder="请输入密码">
+
+												<div class="sure bg1">登录</div>
+												<h4 class="subh4">忘记密码</h4>
+											</form>
+										</li>
+										<li id="emailLogin" class="emailLogin hide">
+											<form action="" method="">
+												<input type="text" id="emailNum" placeholder="请输入邮箱号">
+												<input type="text" id="emailPassword" placeholder="请输入密码">
+												<div class="sure bg1">登录</div>
+												<h4 class="subh4">忘记密码</h4>
+											</form>
+										</li>
+									</ul>
+									<ul class="btns">
+										<li class="bg2"></li>
+										<li class="bg2"></li>
+										<li class="bg2"></li>
+										<h4 class="subh4">注册</h4>
+									</ul>
+								</li>
+								<li class="emailLogin hide">
+									<h3>登录</h3>
+									<div class="title">
+										<h3 class="subh3">手机号登录</h3>
+										<h3 class="subh3">邮箱登录</h3>
+									</div>
+									<div class="lines">
+										<div class="color"></div>
+									</div>
+									<input type="text" id="phone" placeholder="请输入手机号">
+									<input type="password" id="password" placeholder="请输入密码">
+									<div class="btn goLight">登录</div>
+									<h4 class="subh4">忘记密码</h4>
+									<div class="loginFooter">
+										<div class="tbtn"></div>
+										<div class="tbtn"></div>
+										<div class="tbtn"></div>
+										<h4 class="subh4">注册</h4>
+									</div>
+								</li>
+								<li class="noLogin"></li>
+							</ul>
+							<div class="userCard">
+								<h3>用户名</h3>
+								<div class="circle2 bg2"></div>
+								<ul class="userClass" id="userClass">
+									<li class="active">我的打卡</li>
+									<li>我的赛事</li>
+									<li>我的闯关</li>
+									<li>我的挑战</li>
+									<li>我的收藏</li>
+								</ul>
+								<ul class="users">
+									<li>
+										<div class="radiuBtn bg2"></div>
+										<h5 class="mainh5">标题H5</h5>
+										<h5 class="subh5">副标题h5</h5>
+									</li>
+									<li>
+										<div class="radiuBtn bg2"></div>
+										<h5 class="mainh5">标题H5</h5>
+										<h5 class="subh5">副标题h5</h5>
+									</li>
+								</ul>
+								
+								<ul class="users hide">
+									<li>
+										<div class="radiuBtn bg2"></div>
+										<h5 class="mainh5">标题H5</h5>
+										<h5 class="subh5">副标题h5</h5>
+									</li>
+									<li>
+										<div class="radiuBtn bg2"></div>
+										<h5 class="mainh5">标题H5</h5>
+										<h5 class="subh5">副标题h5</h5>
+									</li>
+									<li>
+										<div class="radiuBtn bg2"></div>
+										<h5 class="mainh5">标题H5</h5>
+										<h5 class="subh5">副标题h5</h5>
+									</li>
+								 </ul>
+								<ul class="users hide">
+									<li>
+										<div class="radiuBtn bg2"></div>
+										<h5 class="mainh5">标题H5</h5>
+										<h5 class="subh5">副标题h5</h5>
+									</li>
+									<li>
+										<div class="radiuBtn bg2"></div>
+										<h5 class="mainh5">标题H5</h5>
+										<h5 class="subh5">副标题h5</h5>
+									</li>
+									<li>
+										<div class="radiuBtn bg2"></div>
+										<h5 class="mainh5">标题H5</h5>
+										<h5 class="subh5">副标题h5</h5>
+									</li>
+									<li>
+										<div class="radiuBtn bg2"></div>
+										<h5 class="mainh5">标题H5</h5>
+										<h5 class="subh5">副标题h5</h5>
+									</li>
+								</ul>
+								<ul class="users hide">
+									<li>
+										<div class="radiuBtn bg2"></div>
+										<h5 class="mainh5">标题H5</h5>
+										<h5 class="subh5">副标题h5</h5>
+									</li>
+									<li>
+										<div class="radiuBtn bg2"></div>
+										<h5 class="mainh5">标题H5</h5>
+										<h5 class="subh5">副标题h5</h5>
+									</li>
+								</ul>
+								<div class="users hide">
+									<h5 class="mainh5 nopro">暂无项目</h5>
+								</div> 
+								<div class="title">
+									<h4 class="subh4 findMore">查看更多</h4>
+									<h4 class="subh4">个人中心</h4>
+								</div>
+							</div>
+						</div>
+						
+						
+						
 					</div>
 				</div>
 				
 			</div>			
 			<div class="bar" id="bar">
 				<div class="funcSysbol barInactive" >
-					<img src="../images/导航Inactive.svg" alt="导航">
-					<div class="barCard hide">
+					<div class="iconImg barImg"></div>
+					<div class="barCard">
 						<div class="cardlogo">
 							<div class="logoSmall" id="">
 								<img src="images/ddd.JPG" alt="">
@@ -202,11 +404,11 @@
 					</div>
 				</div>
 				<div class="funcSysbol searchInactive" >
-					<img src="../images/搜索Inactive.svg" alt="搜索">
+					<div class="iconImg searchImg"></div>
 				</div>
 				<div class="funcSysbol noticeInactive" >
-					<img src="../images/通知Inactive.svg" alt="通知">
-					<ul class="noticeCard hide">
+					<div class="iconImg noticeImg"><span>3</span></div>
+					<ul class="noticeCard">
 						<li class="moreNotice">
 							<h3>通知（<span>4</span>）</h3>
 							<ul>
@@ -232,12 +434,12 @@
 								</li>
 							</ul>
 							<h4 class="subh4 findMore">查看更多</h4>
-							<h4 class="subh4">清除所有</h4>
+							<h4 class="subh4 clearAll" >清除所有</h4>
 						</li>
 						<li class="haveNotice hide">
 							<h3>通知（<span>2</span>）</h3>
 							<ul>
-								<li>
+								<!-- <li>
 									<h5 class="mainh5">标题H5</h5>
 									<h4 class="subh4">副标题</h4>
 									<img src="images/取消按钮.svg" alt="">
@@ -246,10 +448,10 @@
 									<h5 class="mainh5">标题H5</h5>
 									<h4 class="subh4">副标题</h4>
 									<img src="images/取消按钮.svg" alt="">
-								</li>
+								</li> -->
 							</ul>
 							<h4 class="subh4 findMore">查看更多</h4>
-							<h4 class="subh4">清除所有</h4>
+							<h4 class="subh4 clearAll">清除所有</h4>
 						</li>
 						<li class="noNotice hide">
 							<h3>通知</h3>
@@ -259,8 +461,8 @@
 					</ul>
 				</div>
 				<div class="funcSysbol infomateInactive" id="login">
-					<img src="../images/个人信息Inactive.svg" alt="个人信息">
-					<ul class="loginCards hide">
+					<div class="iconImg infomateImg"></div>
+					<ul class="loginCards">
 						<li class="">
 							<h3>登录</h3>
 							<ul class="loginCard">
@@ -322,25 +524,15 @@
 					</ul>
 					<div class="userCard">
 						<h3>用户名</h3>
-						<div class="circle2"></div>
-						<ul class="userClass">
+						<div class="circle2 bg2"></div>
+						<ul class="userClass" id="userClass">
 							<li class="active">我的打卡</li>
 							<li>我的赛事</li>
 							<li>我的闯关</li>
 							<li>我的挑战</li>
 							<li>我的收藏</li>
 						</ul>
-						<ul>
-							<li>
-								<div class="radiuBtn bg2"></div>
-								<h5 class="mainh5">标题H5</h5>
-								<h5 class="subh5">副标题h5</h5>
-							</li>
-							<li>
-								<div class="radiuBtn bg2"></div>
-								<h5 class="mainh5">标题H5</h5>
-								<h5 class="subh5">副标题h5</h5>
-							</li>
+						<ul class="users">
 							<li>
 								<div class="radiuBtn bg2"></div>
 								<h5 class="mainh5">标题H5</h5>
@@ -353,7 +545,7 @@
 							</li>
 						</ul>
 						
-						<ul class="hide">
+						<ul class="users hide">
 							<li>
 								<div class="radiuBtn bg2"></div>
 								<h5 class="mainh5">标题H5</h5>
@@ -369,35 +561,8 @@
 								<h5 class="mainh5">标题H5</h5>
 								<h5 class="subh5">副标题h5</h5>
 							</li>
-							<li>
-								<div class="radiuBtn bg2"></div>
-								<h5 class="mainh5">标题H5</h5>
-								<h5 class="subh5">副标题h5</h5>
-							</li>
-						<!-- </ul>
-						<ul>
-							<li>
-								<div class="radiuBtn bg2"></div>
-								<h5 class="mainh5">标题H5</h5>
-								<h5 class="subh5">副标题h5</h5>
-							</li>
-							<li>
-								<div class="radiuBtn bg2"></div>
-								<h5 class="mainh5">标题H5</h5>
-								<h5 class="subh5">副标题h5</h5>
-							</li>
-							<li>
-								<div class="radiuBtn bg2"></div>
-								<h5 class="mainh5">标题H5</h5>
-								<h5 class="subh5">副标题h5</h5>
-							</li>
-							<li>
-								<div class="radiuBtn bg2"></div>
-								<h5 class="mainh5">标题H5</h5>
-								<h5 class="subh5">副标题h5</h5>
-							</li>
-						</ul>
-						<ul>
+						 </ul>
+						<ul class="users hide">
 							<li>
 								<div class="radiuBtn bg2"></div>
 								<h5 class="mainh5">标题H5</h5>
@@ -419,7 +584,7 @@
 								<h5 class="subh5">副标题h5</h5>
 							</li>
 						</ul>
-						<ul>
+						<ul class="users hide">
 							<li>
 								<div class="radiuBtn bg2"></div>
 								<h5 class="mainh5">标题H5</h5>
@@ -430,19 +595,12 @@
 								<h5 class="mainh5">标题H5</h5>
 								<h5 class="subh5">副标题h5</h5>
 							</li>
-							<li>
-								<div class="radiuBtn bg2"></div>
-								<h5 class="mainh5">标题H5</h5>
-								<h5 class="subh5">副标题h5</h5>
-							</li>
-							<li>
-								<div class="radiuBtn bg2"></div>
-								<h5 class="mainh5">标题H5</h5>
-								<h5 class="subh5">副标题h5</h5>
-							</li>
-						</ul> -->
+						</ul>
+						<div class="users hide">
+							<h5 class="mainh5 nopro">暂无项目</h5>
+						</div> 
 						<div class="title">
-							<h4 class="subh4">查看更多</h4>
+							<h4 class="subh4 findMore">查看更多</h4>
 							<h4 class="subh4">个人中心</h4>
 						</div>
 					</div>
@@ -453,9 +611,7 @@
 
 		<div class="main">
 			<div class="card" id="card">
-				<div class="card1 bg1 shadow" id="card1" >
-					
-				</div>
+				<div class="card1 bg1 shadow" id="card1" ></div>
 				<div class="card2 bg1 shadow">
 					<h3 class="subh3">副标题h3</h3>
 					<h3 class="mainh3">标题H3</h3>
@@ -501,7 +657,7 @@
 					</li>
 					<li class="shadow">
 						<div class="canvas">
-							<canvas id="canvas1"  height="175px" width="175px;">
+							<canvas id="canvas1"  height="160px" width="160px;">
         						当前浏览器不支持Canvas，请更换浏览器后再试
    							 </canvas>
 						</div>
@@ -513,7 +669,7 @@
 					</li>
 					<li class="shadow">
 						<div class="canvas">
-							<canvas id="canvas2"  height="175px" width="175px;">
+							<canvas id="canvas2"  height="160px" width="160px;">
 						        当前浏览器不支持Canvas，请更换浏览器后再试
 						    </canvas>
 						</div>
@@ -525,7 +681,7 @@
 					</li>
 					<li class="shadow">
 						<div class="canvas">
-							<canvas id="canvas3"  height="175px" width="175px;">
+							<canvas id="canvas3"  height="60px" width="160px;">
 						        当前浏览器不支持Canvas，请更换浏览器后再试
 						    </canvas>
 						</div>
