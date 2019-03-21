@@ -1,0 +1,387 @@
+@charset "utf-8";
+
+@white:#FFFFFF;
+@black:#1A1A1A;
+@grey:#E3E3E3;
+@border:#D2D2D2;
+@fontgrey:#9B9B9B;
+/*
+	1A1A1A	标题
+	9b9b9b	副标题
+ */
+@border: #D2D2D2;
+.radius(@radius:20px){
+	-webkit-border-radius:@radius;
+	-moz-border-radius:@radius;
+	border-radius:@radius;
+}
+.border_radius(@radius:20px){
+	-webkit-border-radius:@radius;
+	-moz-border-radius:@radius;
+	border-radius:@radius;
+}
+.box{
+	background: @white;
+	width: 100%;
+	.mask{
+		background-color: rgba(255,255,255,0.5);
+		position:fixed;
+		left:0;
+		top:0;
+		display:none;
+		height:100%;
+		width:100%;
+		z-index: 1999;
+		.details{
+			margin:80px;
+			border-radius: 20px;
+			background: #ffffff;
+			height: 820px;
+			overflow: hidden;
+			padding-right: 40px;
+			z-index: 2000;
+			.details_left{
+				width: 620px;
+				background: #74A5DD;
+				height: 740px;
+				position: absolute;
+				border-radius: 20px 0 0 20px;
+				margin-right: 40px;
+				padding: 40px;
+				&>.subh3{
+					line-height: 35px;
+					color: #FFFFFF;
+					opacity: 0.5;
+					filter:Alpha(opacity=50);
+				}
+				&>.mainh2{
+					color: #FFFFFF;
+				}
+				.info{
+					margin-left: 20px;
+					position: absolute;
+					bottom: 20px;
+					width: 580px;
+					height: 130px;
+					background-color: rgba(255,255,255,0.4);
+					border-radius: 20px;
+					padding-top: 30px;
+					// filter: blur(10px);
+					.circle1{
+						float: left;
+						height: 100px;
+						width: 100px;
+						border-radius: 50px;
+						margin: 0px 20px 0px 30px;
+					}
+					.title {
+						.mainh4{
+							margin-top: 29px;
+							color: #FFFFFF;
+						}
+						.subh4{
+							line-height: 20px;
+							color: #FFFFFF;
+						}
+						span{
+							display: block;
+							position: absolute;
+							right: 40px;
+							height: 40px;
+							width: 110px;
+							background: #FFFFFF;
+							color: #F25B68;
+							top: 60px;
+							line-height: 40px;
+							text-align: center;
+							border-radius: 5px;
+							font-weight: bold;
+						}
+					}
+				}
+			}
+			.details_right{
+				background: #AAE4B7;
+				height: 740px;
+				margin-left: 740px;
+				width:calc(~"100% - 740px");
+				padding-top: 40px;
+				padding-bottom: 40px;
+				position: relative;
+			}
+		}
+
+	}
+	.header{
+		height: 80px;
+	}
+	.main{
+		width: 100%;
+		overflow: hidden;
+		.top{
+			height: 160px;
+			border-bottom: 1px solid @grey;
+			h1{
+				margin-left: 40px;
+				color:@black;
+				float: left;
+				line-height: 160px;
+			}
+			ul{
+				position: absolute;
+				right: 40px;
+				margin-top: 60px;
+				overflow: hidden;
+
+				li{
+					font-weight: bold;
+					float: left;
+					padding: 0 20px;
+					line-height: 40px;
+					border:1px solid @grey;
+					.border_radius();
+					margin-right: 20px;
+					color: @black;
+					.choose{
+						color: @white;
+					}
+					&:nth-last-child(1){
+						margin-right: 0px;
+					}
+				}
+			}
+		}
+		.project{
+			overflow: hidden;
+			float: left;
+			width: 500px;
+			border-right: 1px solid @border;
+			.fenlei{
+				margin-top: 30px;
+				padding-bottom: 30px;
+				overflow: hidden;
+				border-bottom: 1px solid @border;
+				li{
+					font-weight: bold;
+					float: left;
+					padding: 0 20px;
+					text-align: center;
+					line-height: 38px;
+					height: 38px;
+					border:1px solid @grey;
+					.border_radius(5px);
+					margin-left:20px;
+					color: @black;
+					&:first-child{
+						margin-left: 40px;
+						a{
+							color:@white;
+						}
+					}
+				}
+			}
+			.meclock{
+				overflow: hidden;
+				h3{
+					margin: 16px 0 12px 36px;
+				}
+				ul{			
+					margin-left: 20px;
+					overflow: hidden;
+					margin-bottom: 24px;
+					width: 440px;
+
+					li{
+						height: 96px;
+						display: flex;
+						.radiuBtn{
+							height: 60px;
+							width: 60px;
+							.border_radius(5px);
+							margin: 18px 8px 18px 16px;
+						}
+						.mainh5{
+							margin: 34px 198px 0 0;
+
+						}
+						.subh5{
+							margin-top: 37px;
+							color:@fontgrey;
+						}
+					}
+				}
+			}
+			.mycollect{
+				overflow: hidden;
+				h3{
+					margin: 20px 0;
+					margin-left: 40px;
+				}
+				ul{
+					margin-left: 20px;
+					overflow: hidden;
+					width: 460px;
+					li{
+						position: relative;
+						height: 60px;
+						overflow: hidden;
+						.circle2{
+							height: 40px;
+							width: 40px;
+							.border_radius(20px);
+							position: absolute;
+							left: 20px;
+							top: 10px;
+							
+						}
+						.mainh5{
+							float: left;
+							margin-left: 90px;
+							line-height: 60px;
+
+						}
+						.subh5{
+							float: right;
+							margin-right:20px;
+							font-weight: bold;
+							line-height: 60px;
+							color: @grey;
+						}
+					}
+				}
+			}
+		}
+		
+		.view{
+			width: calc(~"100% - 501px");
+			float: left;
+			overflow: hidden;
+			.viewcard{
+				width: 2500px;
+				h2{
+					margin:40px 0 20px 40px;
+				}
+				.cardlist{
+					display: flex;
+					height: 510px;
+					margin-left: 48px;
+					&>li{
+						width: 408px;
+						margin-right: 24px;
+						.radius();
+						overflow: hidden;
+						padding: 0 20px;
+						width: 368px;
+						.subh3:first-child{
+							margin: 27px 0 1px 0;
+						}
+						.mainh3{
+							margin-bottom: 32px;
+						}
+						ul{
+							li{
+								display: flex;
+								border-top: 1px solid @border;
+								height: 79px;
+								.circle1{
+									height: 60px;
+									width: 60px;
+									.radius(60px);
+									margin: 10px 10px 10px 0;
+								}
+								.title{
+									margin:15px 108px 0 0;
+									height: 49px;
+									width: 110px;
+								}
+								.btn{
+									margin: 24px 0;
+								}
+							}
+						}
+						.subh3:last-child{
+							margin-top: 24px;
+							text-align:center;
+							cursor: pointer;
+						}
+					}
+					&>li:first-child{
+						padding: 0;
+						width: 408px;
+						.up{
+							height: 85px;
+							background-color: rgba(255,255,255,0.5);
+							padding: 15px 20px 0 20px;
+							h3{
+								color:@white;
+							}
+						}
+						.subh3:first-child{
+							margin: 0px 0 1px 0;
+						}
+					}
+					&>li:last-child{
+						margin-right: 0;
+					}
+				}
+				.cardlist:last-child{
+					.card1{
+						width: 840px;
+						height: 510px;
+						color: white;
+						.radius();
+						cursor: pointer;
+					}
+					&>li{
+						width: 408px;
+						margin-right: 24px;
+						.radius();
+						overflow: hidden;
+						padding: 0;
+						h3{
+							margin-left: 20px;
+							color:@white;
+						}
+					
+					}
+					.subh3:first-child{
+							margin: 27px 0 1px 20px;
+					}
+					&>li:last-child{
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+}
+// .viewlist{
+// 				overflow: hidden;
+// 				width: 100%;
+// 				.viewcard{
+// 					overflow: hidden;
+// 					float: left;
+					
+// 					h2{
+// 						margin:40px 0 20px 40px;
+// 					}
+// 					.cardlist{
+// 						height: 480px;
+// 						width:2000px; 
+// 						overflow: hidden;
+// 						li{
+							// margin-left: 40px;
+							// width: 400px;
+							// height: 460px;
+							// float: left;
+							// padding-top: 20px;
+							// cursor: pointer;
+							// .border_radius(20px);
+							// h3{
+							// 	margin-left: 20px;
+							// 	color:@white;
+							// }
+// 						}
+// 					}
+// 				}
+// 			}
