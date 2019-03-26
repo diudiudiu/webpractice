@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>焦点图</title>
+</head>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+	#box{
+		margin: 100px auto 0 auto;
+		border: 1px solid #404040;
+		padding: 10px;
+		width: 500px;
+		height: 350px;
+		position: relative;
+		overflow: hidden;
+	}
+	#imgs{
+		width: 500px;
+		height: 350px;
+		display: flex;
+		overflow: hidden;
+		position: relative;
+	}
+	#imgs li{
+		width: 500px;
+		height: 350px;
+	}
+	#leftBtn,#rightBtn{
+		position: absolute;
+		top: 150px;
+		background: rgba(192,192,192,0.4);
+		cursor: pointer;
+		opacity: 0.5;
+		transition: opacity 1s;
+	}
+	#leftBtn{
+		left: 10px;
+	}
+	#rightBtn{
+		right: 10px;
+		transform: rotate(180deg);
+	}
+	#leftBtn img,#rightBtn img{
+		height: 70px;
+		width: 70px;
+	}
+	#num{
+		position: absolute;
+		right: 20px;
+		bottom:20px;
+	}
+	#num span{
+		background: #fff;
+		display: inline-block;
+		width: 25px;
+		height: 25px;
+		text-align: center;
+		margin-right: 8px;
+		border: 1px solid #404040;
+		cursor: pointer;
+	}
+	#num span:last-child{
+		margin-right: 0;
+	}
+	#num .active{
+		background: #FF6A00;
+		color: #fff;
+	}
+</style>
+<body>
+	<div id="box">
+		<ul id="imgs">
+			<li><img src="images/jj1.jpg" alt=""></li>
+			<li><img src="images/jj2.jpg" alt=""></li>
+			<li><img src="images/jj3.jpg" alt=""></li>
+			<li><img src="images/jj4.jpg" alt=""></li>
+			<li><img src="images/jj5.jpg" alt=""></li>
+		</ul>
+		<div id="leftBtn"><img src="images/剪头.png" alt=""></div>
+		<div id="rightBtn"><img src="images/剪头.png" alt=""></div>
+		<div id="num">
+		</div>
+	</div>
+	<script>
+		var imgs=document.getElementById('imgs');
+		var lis=imgs.getElementsByTagName('li');
+		var num=document.getElementById('num');
+		// var spans=num.getElementsByTagName('span');	
+		var leftBtn=document.getElementById('leftBtn');
+		var rightBtn=document.getElementById('rightBtn');
+		imgs.onmouseover=function(){
+			leftBtn.style.opacity=1;
+			rightBtn.style.opacity=1;
+			clearInterval(timer);
+		}
+		imgs.onmouseout=function(){
+			leftBtn.style.opacity=0.5;
+			rightBtn.style.opacity=0.5;
+			timer=setInterval(clickHandle,1000);
+		}
+		var imgw=imgs.offsetWidth;
+		var index=0;
+		/* 在num的标签中加入span标签  */
+		for (var i = 0; i < lis.length; i++) {
+			var spanobj=document.createElement('span');
+			spanobj.index=i;
+			num.appendChild(spanobj);
+			spanobj.innerHTML=(i+1);
+			spanobj.onmouseover=function(){
+				for (var j = 0; j < num.children.length; j++) {
+					num.children[j].removeAttribute('class');
+				}
+				this.className="active"; 
+				/* 获取索引值 */
+				index=this.index;
+				animate(lis[0], -index*imgw);
+			}
+		}
+		/* 设置第一个 的样式  */
+		num.children[0].className="active";
+		imgs.appendChild(imgs.children[0].cloneNode(true));
+
+		var timer=setInterval(clickHandle,1000);
+
+		/* 右侧点击事件 */
+		function clickHandle(){
+			if (index==lis.length-1) {
+				index=0;
+				lis[0].style.marginLeft=0+"px";
+			}
+			index++;	
+			animate(lis[0], -index*imgw);
+			if (index==lis.length-1) {
+				num.children[num.children.length-1].removeAttribute("class");
+				num.children[0].className="active";
+			}
+			else{
+				for (var i = 0; i < num.children.length; i++) {
+					num.children[i].removeAttribute('class');
+				}
+				num.children[index].className="active";
+			}
+		}
+
+
+		/* 右侧按钮 */
+		rightBtn.onclick=clickHandle;
+		/* 左侧按钮 */
+		leftBtn.onclick=function(){
+			if (index==0) {
+				index=lis.length-1;
+				lis[0].style.marginLeft=-index*imgw+"px";
+			}
+ 			index--;
+			animate(lis[0], -index*imgw);
+			/* 设置小按钮颜色 */
+			for (var i = 0; i < num.children.length; i++) {
+				num.children[i].removeAttribute('class');
+			}
+			num.children[index].className="active";
+			
+		}
+		/*匀速*/
+		function animate(element,target) {
+			clearInterval(element.timeId);
+			element.timeId=setInterval(function(){
+
+				//获取元素左侧
+				var current= element.offsetLeft;
+				//每次移动的距离
+				var step=10;
+				//匀速
+				step=current<target?step:-step;
+				current += step;
+				if (Math.abs(current-target)>Math.abs(step)) {
+					element.style.marginLeft=current+"px";
+				}else{
+					clearInterval(element.timeId);
+					element.style.marginLeft=target+"px";
+				}
+
+				//减速
+				//var step = (target-current);
+				// step=step>0?Math.ceil(step):Math.floor(step);
+				// current += step;
+				// if (current==target) {
+				// 	clearInterval(element.timeId);
+				// }
+			})
+		}
+	</script>
+</body>
+</html>
