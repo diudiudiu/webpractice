@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>焦点图</title>
+</head>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+	#box{
+		margin: 100px auto 0 auto;
+		border: 1px solid #404040;
+		padding: 10px;
+		width: 500px;
+		height: 350px;
+		position: relative;
+		overflow: hidden;
+	}
+	#imgs{
+		width: 500px;
+		height: 350px;
+		display: flex;
+		overflow: hidden;
+		position: relative;
+	}
+	#imgs li{
+		width: 500px;
+		height: 350px;
+	}
+	#leftBtn,#rightBtn{
+		position: absolute;
+		top: 150px;
+		background: rgba(192,192,192,0.4);
+		cursor: pointer;
+		opacity: 0.5;
+		transition: opacity 1s;
+	}
+	#leftBtn{
+		left: 10px;
+	}
+	#rightBtn{
+		right: 10px;
+		transform: rotate(180deg);
+	}
+	#leftBtn img,#rightBtn img{
+		height: 70px;
+		width: 70px;
+	}
+	#num{
+		position: absolute;
+		right: 20px;
+		bottom:20px;
+	}
+	#num span{
+		background: #fff;
+		display: inline-block;
+		width: 25px;
+		height: 25px;
+		text-align: center;
+		margin-right: 8px;
+		border: 1px solid #404040;
+		cursor: pointer;
+	}
+	#num span:last-child{
+		margin-right: 0;
+	}
+	#num .active{
+		background: #FF6A00;
+		color: #fff;
+	}
+</style>
+<body>
+	<div id="box">
+		<ul id="imgs">
+			<li><img src="images/jj1.jpg" alt=""></li>
+			<li><img src="images/jj2.jpg" alt=""></li>
+			<li><img src="images/jj3.jpg" alt=""></li>
+			<li><img src="images/jj4.jpg" alt=""></li>
+			<li><img src="images/jj5.jpg" alt=""></li>
+		</ul>
+		<div id="leftBtn"><img src="images/剪头.png" alt=""></div>
+		<div id="rightBtn"><img src="images/剪头.png" alt=""></div>
+		<div id="num">
+		</div>
+	</div>
+	<script>
+		var imgs=document.getElementById('imgs');
+		var lis=imgs.getElementsByTagName('li');
+		var num=document.getElementById('num');
+		// var spans=num.getElementsByTagName('span');	
+		var leftBtn=document.getElementById('leftBtn');
+		var rightBtn=document.getElementById('rightBtn');
+		
+
+
+
+		var config=[
+			{
+				width: 400,
+				top: 20,
+				left: 50,
+				opacity: 0.2,
+				zIndex: 2
+			},//0
+			{
+				width: 600,
+				top: 70,
+				left: 0,
+				opacity: 0.8,
+				zIndex: 3
+			},//1
+			{
+				width: 800,
+				top: 100,
+				left: 200,
+				opacity: 1,
+				zIndex: 4
+			},//2
+			{
+				width: 600,
+				top: 70,
+				left: 600,
+				opacity: 0.8,
+				zIndex: 3
+			},//3
+			{
+				width: 400,
+				top: 20,
+				left: 750,
+				opacity: 0.2,
+				zIndex: 2
+			}//4
+		];
+
+		function getStyle(element,attr){
+			return window.getComputedStyle? window.getComputedStyle(element,null)[attr]:element.currentStyle[attr];
+		}
+
+		//改变 层级 透明度
+		function animate(element,json,fn) {
+			clearInterval(element.timeId);
+			element.timeId=setInterval(function(){
+				var flag=true;
+				for(var attr in json){
+					if(attr=="opacity"){
+						//当前透明度放大100倍
+						var current= getStyle(element,attr)*100;
+						//目标放大100倍
+						var target=json[attr]*100;
+						var step = (target-current)/10;
+						step=step>0?Math.ceil(step):Math.floor(step);
+						current += step;
+						element.style[attr]=current/100;
+					}else if(attr=="zIndex"){
+						element.style[attr]=json[attr];
+					}else{//普通属性
+						//获取元素s属性
+						var current= parseInt(getStyle(element,attr));
+						//每次移动的距离
+						var target=json[attr];
+						var step = (target-current)/10;
+						step=step>0?Math.ceil(step):Math.floor(step);
+						current += step;
+						element.style[attr]=current+"px";
+					}
+					//是否到达目标
+					if(current!=target){
+						flag=false;
+					}
+				}
+				if (flag) {
+					clearInterval(element.timeId);
+					if (fn) {
+						fn();
+					}
+				}
+				
+			})
+		}
+	</script>
+</body>
+</html>
