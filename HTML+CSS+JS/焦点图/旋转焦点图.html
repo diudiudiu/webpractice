@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>焦点图</title>
+	<title>旋转焦点图</title>
 </head>
 <style>
 *{
@@ -12,132 +12,145 @@
 li{
 	list-style: none;
 }
-	#box{
-		margin: 100px auto 0 auto;
-		border: 1px solid #404040;
-		padding: 10px;
-		width: 500px;
-		height: 350px;
-		position: relative;
-		overflow: hidden;
-	}
-	#imgs{
-		width: 500px;
-		height: 350px;
-		display: flex;
-		overflow: hidden;
-		position: relative;
-	}
-	#imgs li{
-		width: 500px;
-		height: 350px;
-	}
-	#leftBtn,#rightBtn{
-		position: absolute;
-		top: 150px;
-		background: rgba(192,192,192,0.4);
-		cursor: pointer;
-		opacity: 0.5;
-		transition: opacity 1s;
-	}
-	#leftBtn{
-		left: 10px;
-	}
-	#rightBtn{
-		right: 10px;
-		transform: rotate(180deg);
-	}
-	#leftBtn img,#rightBtn img{
-		height: 70px;
-		width: 70px;
-	}
-	#num{
-		position: absolute;
-		right: 20px;
-		bottom:20px;
-	}
-	#num span{
-		background: #fff;
-		display: inline-block;
-		width: 25px;
-		height: 25px;
-		text-align: center;
-		margin-right: 8px;
-		border: 1px solid #404040;
-		cursor: pointer;
-	}
-	#num span:last-child{
-		margin-right: 0;
-	}
-	#num .active{
-		background: #FF6A00;
-		color: #fff;
-	}
+
+#slide{
+	margin: 100px auto 0 auto;
+	/*border: 1px solid #404040;*/
+	padding: 10px;
+	width:1100px;
+	height: 350px;
+	position: relative;
+}
+
+#imgs li{
+	position: absolute;
+    left:200px;
+    top:0;
+}
+#imgs li img{
+	height: 100%;
+	width: 100%;
+}
+#leftBtn,#rightBtn{
+	position: absolute;
+	top: 150px;
+	cursor: pointer;
+	opacity: 0;
+	z-index: 900;
+}
+#leftBtn{
+	left: 10px;
+}
+#rightBtn{
+	right: 10px;
+	transform: rotate(180deg);
+}
+#leftBtn img,#rightBtn img{
+	height: 70px;
+	width: 70px;
+}
 </style>
 <body>
-	<div id="box">
-		<ul id="imgs">
-			<li><img src="images/jj1.jpg" alt=""></li>
-			<li><img src="images/jj2.jpg" alt=""></li>
-			<li><img src="images/jj3.jpg" alt=""></li>
-			<li><img src="images/jj4.jpg" alt=""></li>
-			<li><img src="images/jj5.jpg" alt=""></li>
-		</ul>
-		<div id="leftBtn"><img src="images/剪头.png" alt=""></div>
+	<div class="slide" id="slide">
+	    <ul id="imgs">
+	        <li><a href="#"><img src="images/jj1.jpg" alt=""/></a></li>
+	        <li><a href="#"><img src="images/jj2.jpg" alt=""/></a></li>
+	        <li><a href="#"><img src="images/jj3.jpg" alt=""/></a></li>
+	        <li><a href="#"><img src="images/jj4.jpg" alt=""/></a></li>
+	        <li><a href="#"><img src="images/jj5.jpg" alt=""/></a></li>
+	    </ul>
+	    <div id="leftBtn"><img src="images/剪头.png" alt=""></div>
 		<div id="rightBtn"><img src="images/剪头.png" alt=""></div>
-		<div id="num">
-		</div>
 	</div>
+	
+
+
 	<script>
-		var imgs=document.getElementById('imgs');
-		var lis=imgs.getElementsByTagName('li');
-		var num=document.getElementById('num');
-		// var spans=num.getElementsByTagName('span');	
-		var leftBtn=document.getElementById('leftBtn');
-		var rightBtn=document.getElementById('rightBtn');
-		
 
-
-
+	window.onload=function(){
 		var config=[
 			{
-				width: 400,
-				top: 20,
-				left: 50,
+				width: 350,
+				top: 0,
+				left: 160,
 				opacity: 0.2,
 				zIndex: 2
 			},//0
 			{
-				width: 600,
-				top: 70,
+				
+				width: 400,
+				top: 50,
 				left: 0,
 				opacity: 0.8,
 				zIndex: 3
 			},//1
 			{
-				width: 800,
-				top: 100,
-				left: 200,
+				width: 500,
+				top: 80,
+				left: 310,
 				opacity: 1,
 				zIndex: 4
 			},//2
 			{
-				width: 600,
-				top: 70,
-				left: 600,
+				width: 400,
+				top: 50,
+				left: 720,
 				opacity: 0.8,
 				zIndex: 3
 			},//3
 			{
-				width: 400,
-				top: 20,
-				left: 750,
+				width: 350,
+				top: 0,
+				left: 610,
 				opacity: 0.2,
 				zIndex: 2
 			}//4
 		];
 
-		function getStyle(element,attr){
+		var flag=true; //锁
+		var leftBtn=document.getElementById('leftBtn');
+		var rightBtn=document.getElementById('rightBtn');
+		var imgs=document.getElementById('imgs');
+		var list=imgs.getElementsByTagName('li');
+		var slide=document.getElementById('slide');
+		slide.onmouseover=function(){
+			animate(leftBtn, {opacity:1});
+			animate(rightBtn, {opacity:1});
+		}
+		slide.onmouseout=function(){
+			animate(leftBtn, {opacity:0});
+			animate(rightBtn, {opacity:0});
+		}
+		console.log(rightBtn);
+		rightBtn.onclick=function (){
+			if (flag) {
+				flag=false;
+				config.push(config.shift());
+				assign();
+			}
+			
+		}
+		leftBtn.onclick=function (){
+			if (flag) {
+				flag=false;
+				config.unshift(config.pop());
+				assign();
+			}
+		}
+		assign();
+		function assign(){
+			for (var i = 0; i < list.length; i++) {
+	          //设置每个li,都要把宽,层级,透明度,left,top到达指定的目标位置
+	          animate(list[i], config[i],function () {
+	          	flag=true;
+	          });
+	        }
+		}
+	}
+		
+		
+		
+        function getStyle(element,attr){
 			return window.getComputedStyle? window.getComputedStyle(element,null)[attr]:element.currentStyle[attr];
 		}
 
