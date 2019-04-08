@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简易贪吃蛇1.1</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="map" id="map">
+	<div id="mask">
+		<div class="snake">
+			<div class="snakeBody"></div>
+			<div class="snakeHead"></div>
+		</div>
+		<div class="begin">
+			<h2>贪食蛇2.0</h2>
+			<div class="btn">开始</div>
+		</div>
+		<div class="grand hide">
+			<h2>贪食蛇2.0</h2>
+			<div class="btn">简单</div>
+			<div class="btn">普通</div>
+			<div class="btn">困难</div>
+		</div>
+		<div class="again hide">
+			<h2>贪食蛇2.0</h2>
+			<div class="btn" id="numbers">GameOver 得分：<span id="num"></span></div>
+			<div class="btn">再来一次</div>
+			<div class="btn">选择等级</div>
+		</div>
+	</div>
+</div>
+<script src="js/food.js"></script>
+<script src="js/snake.js"></script>
+<script src="js/game.js"></script>
+
+<script src="js/script.js"></script>
+<script>
+	var btn=document.getElementsByClassName("btn");
+	var timer=null;
+	var start=btn[0];
+	var begin=document.getElementsByClassName("begin")[0];
+	var grand=document.getElementsByClassName("grand")[0];
+	var again=document.getElementsByClassName("again")[0];
+
+	var mask=document.getElementById("mask");
+	var num=0;//得分
+	var snake=document.getElementsByClassName("snake")[0];
+	var againBtns=again.getElementsByClassName("btn");
+	var NUM;
+	running();
+	start.onclick=function(){
+		grand.className="grand";
+		begin.className="begin hide";
+	};
+	btn[1].onclick=function(){
+		NUM=200;
+		goGame(NUM);
+	};
+	btn[2].onclick=function(){
+		NUM=100;
+		goGame(NUM);
+	};
+	btn[3].onclick=function(){
+		NUM=50;
+		goGame(NUM);
+	};
+	againBtns[1].onclick=function(){
+		goGame(NUM);
+	};
+	againBtns[2].onclick=function(){
+		mask.style.display="block";
+		grand.className="grand";
+		begin.className="begin hide";
+		again.className="again hide";
+	};
+	function goGame(NUM){
+		var gm=new Game(document.getElementById('map'));
+		mask.style.display="none";
+		clearInterval(timer);
+		gm.init(NUM);
+	}
+	function over(){
+		running();
+		mask.style.display="block";
+		grand.className="grand hide";
+		begin.className="begin hide";
+		again.className="again";
+		alert(NUM);
+	}
+
+	//循环跑函数
+	function running(){
+		timer=setInterval(function(){
+			snake.style.left=snake.offsetLeft+20+"px";
+			if (snake.offsetLeft>720) {
+				snake.style.left=-60+"px";
+			}
+		},100)
+	}
+</script>
+</body>
+</html>

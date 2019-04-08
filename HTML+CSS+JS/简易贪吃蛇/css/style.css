@@ -1,0 +1,68 @@
+.map{
+	width: 800px;
+	height: 600px;
+	background: #ccc;
+	position: relative;
+	margin: 40px auto;
+	border: 1px solid #000;
+	overflow: hidden;
+}
+h2{
+	text-align: center;
+	font-size: 50px;
+	padding-top: 80px;
+}
+.snake{
+	position: absolute;
+	top:60px;
+	left: 40px;
+	z-index: 101;
+	width: 60px;
+	display: flex;
+	height: 20px;
+}
+.snake .snakeHead{
+	background: red;
+	width: 20px;
+}
+.snake .snakeBody{
+	background: orange;
+	width: 40px;
+}
+.hide{
+	display: none;
+
+}
+#mask{
+	height: 100%;	
+	width: 100%;	
+	background: #fff;
+	position: absolute;
+	z-index: 100;
+}
+.btn{
+	width: 270px;
+	height: 70px;
+	background: #fff;
+	text-align: center;
+	font-size: 40px;
+	line-height: 70px;
+	margin: 50px auto 0 auto;
+	cursor: pointer;
+	border-radius: 20px;
+	color: #F25b68;
+	border: 1px solid #D2D2D2;
+	padding: 0 10px;
+}
+.btn:hover{
+	background: -webkit-linear-gradient(to right, #F25B68, #DA628C);
+	background: -o-linear-gradient(to right, #F25B68, #DA628C);
+	background: linear-gradient(to right, #F25B68, #DA628C);
+	color: #fff;
+}
+.begin .btn{
+	margin: 90px auto 0 auto;
+}
+#numbers{
+	width: 500px;
+}
