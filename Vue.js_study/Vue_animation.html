@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		/*两组样式控制 transition 内部动画*/
+		/*v-enter是进入起始状态*/
+		/*v-leave-to 离开之后 动画结束状态*/
+		/*.v-enter,
+		.v-leave-to{
+			opacity: 0;
+			transform: translateX(150px); 
+		}*/
+		/*v-enter-active入场动画时间段*/
+		/*v-leave-active离场动画时间段
+		.v-enter-active,
+		.v-leave-active{
+			transition: all 0.4s ease;
+		}*/
+		.ball{
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			background: red;
+		}
+		li{
+			line-height: 35px;
+			border: 1px solid #000;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="app">
+		<input type="button" value="toggle" @click="flag=!flag">
+		
+		<transition
+			@before-enter="beforeEnter"
+      		@enter="enter"
+      		@after-enter="afterEnter">
+			<div class="ball" v-show="flag"></div>
+		</transition>
+		<!-- transition元素是Vue官方提供的 -->
+		<!-- <transition>
+			<h3 v-if="flag">这事一个H3</h3>
+			
+		</transition> -->
+	</div>
+	<div id="app2">
+		<div>
+			id:
+			<input type="text" v-model="id">
+			name:
+			<input type="text" v-model="name">
+
+			<input type="button" value="add" @click="add">
+		</div>
+		<ul>
+			<li v-for="(item,i) in list" :key="item.id" @click="del(i)"></li>
+		</ul>
+	</div>
+	<script src="lib/vue-2.4.0.js"></script>
+
+	<script>
+
+		var vm=new Vue({
+			el: '#app',
+			data:{
+				flag:false
+				
+			},
+			
+			methods:{
+				// 动画钩子函数的第一个参数 表示要执行的DOM元素 是个原生js对象
+				beforeEnter(el){
+					// 表示动画入场之前，可以在该函数中 设置 动画开始之前的起始样式
+					el.style.transform="translate(0,0)";
+				},
+				enter(el,done){
+					// 表示动画开始之后的样式，可以在该函数中设置结束状态。
+					el.offsetWidth;
+					// 这句话无作用，但是不写动画出不来
+					el.style.transform="translate(150px,450px)";
+					el.style.transition="all 2s ease";
+					done(); 
+					// 是afterEnter函数引用
+				},
+				afterEnter(el){
+					// 动画完成之后执行该函数。
+					// console.log('ok');
+					this.flag=!this.flag;
+					
+				}
+			}
+		});
+		var vm2=new Vue({
+			el: '#app2',
+			data:{
+				id:'',
+				name:'',
+				list:[
+					{id:1,name:'a'},
+					{id:2,name:'b'},
+					{id:3,name:'c'},
+					{id:4,name:'d'}
+
+				]
+				
+			},
+			
+			methods:{
+				add(){
+					this.list.push({id:this.id,name:this.name})
+				},
+				del(i){
+					this.list.splice(i,1);
+				},
+				beforeEnter(el){
+				},
+				enter(el,done){
+				},
+				afterEnter(el){
+					
+				}
+			}
+		});
+	</script>
+</body>
+</html>

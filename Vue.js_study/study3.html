@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<div id="app">
+		<div>
+			<h3>添加品牌</h3>
+			<div>
+				<label>name:</label>
+				<input type="text" v-model="name" @keyup.enter='add'>
+				<input type="button" @click="add" value="add">
+				<label>serach:</label>
+				<input type="text" >
+
+			</div>
+		</div>
+		<table>
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Name</th>
+					<th>Ctime</th>
+					<th>Operation</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- 获取返回的数组 -->
+				<tr v-for="item in list" :key="item.id">
+					<td>{{ item.id }}</td>
+					<td>{{ item.name }}</td>
+					<td>{{ item.ctime }}</td>
+
+					<td>
+						<a href="" @click.prevent="del(item.id)">删除</a>
+					</td>
+					
+				</tr>
+			</tbody>
+		</table>
+		
+	</div>
+	<script src="lib/vue-2.4.0.js"></script>
+	<script src="lib/vue-resource-1.3.4.js"></script>
+
+	<script>
+		Vue.http.options.root='http://vue.studyit.io/';
+		Vue.http.options.emulateJSON=true;
+
+		var vm=new Vue({
+			el: '#app',//表示当前我们 呢位的这个Vue实例要控制页面上哪个区域
+			data:{
+				name:'',
+				list:[
+					{ id:1, name:'奔驰',ctime:new Date()},
+					{id:2, name:'宝马',ctime:new Date()}
+				]
+			},
+			created(){
+				//当data初始化完毕后 执行该函数。
+				this.getAllList();
+			},
+			methods:{
+				add(){
+					this.$http.post('api/addproduct', {name=this.name}, {}).then(result => {
+						if(result.body.status===0){
+							this.getAllList();
+							this.name='';
+						}else{
+							console.log('失败');
+						}
+					})
+				},
+				del(id){
+					this.$http.get('api/delproduct/'+id).then(function (result) {
+						if(result.body.status===0){
+							this.getAllList();
+							
+						}else{
+							console.log('失败');
+						}
+					})
+				},
+				getAllList(){
+					//获取所有车的列表
+					this.$http.get('api/getprodlist').then(function (result) {
+						if(result.body.status===0){
+							this.list=result.body.message;
+						}else{
+							console.log('失败');
+						}
+					})
+				},
+				getInfo(){//发起get请求
+					this.$http.get('http://vue.studyit.io/api/getlunbo').then(function (result) {
+						if(result.body.status===0){
+							this.list=result.body.message;
+						}else{
+							console.log('失败');
+						}
+					})
+
+				},
+				postInfo(){
+					// 手动发起的post请求没有表单格式 （application/x-www=form-urlencoded ）
+					// emulateJSON 可作为第三个参数 设置 表单格式
+					this.$http.post('http://vue.studyit.io/api/post', {}, { emulateJSON:true }).then(result => {
+						console.log(result.body);
+					})
+				},
+				jsonpInfo(){
+					this.$http.jsonp('http://vue.studyit.io/api/jsonp').then(result => {
+						console.log(result.body);
+					})
+				}
+			}
+		});
+	</script>
+</body>
+</html>

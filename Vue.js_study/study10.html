@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>路由嵌套</title>
+	<link rel="stylesheet" href="lib/bootstrap-3.3.7.css">
+	
+</head>
+<body>
+	<div id="app">
+        <input type="text" v-model="firstName" >
+        <input type="text" v-model="secondName" >
+        <input type="text" v-model="fullName" >
+
+	</div>
+	
+	<script src="lib/vue-2.4.0.js"></script>
+	<script>
+		
+		var vm=new Vue({
+			el: '#app',
+			data:{ 
+                firstName:'',
+                secondName:'',
+                // fullName:''
+			},
+			methods:{
+			},
+            watch: {
+                // 监视data中的数据变化执行对应的函数
+                // 'firstName' :function(){
+                //     this.fullName=this.firstName+this.secondName;
+                // },
+                // 内置两个参数 第一个为newVal 第二个位oldVal
+                // 'secondName' :function(newVal,oldVal){
+                //     this.fullName=this.firstName+newVal;
+                // }
+            },
+            computed: {
+                //在这个属性中 可定义一些属性 这些属性 叫做计算属性  本质是一个方法
+                // 如果计算属性中所用的data数据有更新就会调用这个计算属性 
+                'fullName':function(){
+                    return this.firstName+'-'+this.secondName
+                }
+            }
+		});
+		
+	</script>
+</body>
+</html>

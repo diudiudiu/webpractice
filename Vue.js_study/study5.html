@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>list表</title>
+	<style>
+		
+	</style>
+</head>
+<body>
+	<div id="app">
+		
+		<!-- 如果要使用组件，直接把组件的名称，以html标签形式，引入到页面中，即可 -->
+		<!-- 如果使用驼峰命名的组件 把大写 改为-小写  否则组件不生效-->
+		<my-com1></my-com1>
+		<my-com2></my-com2>
+		<my-com3></my-com3>
+		<my-com5></my-com5>
+		<my-com4></my-com4>
+		<login></login>
+		
+
+		
+		
+	</div>
+	<template id="tmp1">
+			<div>
+				<h2>外部定义结构方便，代码提示</h2>
+			</div>
+		</template>
+		<template id="tmp2">
+			<div>
+				<h3>私有login 组件</h3>
+			</div>
+		</template>
+	<script src="lib/vue-2.4.0.js"></script>
+	<script>
+
+
+		// 全局组件！！！！！！！！
+		//使用Vue.extend 来创建全局的Vue组件
+		var com1=Vue.extend({
+			template:'<h3>Vue.extend组件化</h3>',
+			// 通过 template 属性，指定了组件要展示的HTML结构
+		});
+		// 使用 Vue.component('组件的名称',创建出来的组件模版对象);
+		Vue.component('myCom1',com1);
+
+		//简写
+		Vue.component('myCom2',Vue.extend({
+			template:'<h3>简写Vue.extend组件化</h3>'
+			// 通过 template 属性，指定了组件要展示的HTML结构，template有且只有一个根元素
+		}));
+		// Vue.component 第一个参数：组件名称，将来在引用组件的时候就是一个 标签行事 来引入 它的
+		// 第二个参数：Vue.extend 创建的标签
+		// 
+		
+		Vue.component('myCom3',{
+			template:'<h3>字面量组件化</h3>'
+			// 通过 template 属性，指定了组件要展示的HTML结构
+		});
+
+		Vue.component('myCom4',{
+			template:'#tmp1',
+			// 通过id
+			
+		});
+		Vue.component('myCom5',{
+			template:'<h3>{{msg}}</h3>',
+			// 通过id
+			data:function(){
+				return{
+					msg:'aaaaa',
+				}
+			}
+		});
+
+
+		//组件可以有自己的data数据
+		//组件的 data 和实例 的data 有点不一样 ，实例中的 data 可以为一个对象 ，组件中的data是一个函数，返回一个对象
+
+		// 私有组件
+		var vm=new Vue({
+			el: '#app',
+			data:{
+				
+			},
+			methods : {
+				
+				
+			},
+			filters:{},
+			directives:{},
+			components:{
+				// 私有组件
+				login:{
+					template:'#tmp2',
+					data:function(){
+						return{	msg:'ccccc'	}
+					}
+				}
+			},
+
+			beforeCreate(){},
+			created(){},
+			beforeMount(){},
+			mounted(){},
+			beforeUpdate(){},
+			update(){},
+			beforeDestroy(){},
+			destroyed(){},
+		});
+		
+	</script>
+</body>
+</html>

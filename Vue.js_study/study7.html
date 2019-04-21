@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>父组件向子组件传值</title>
+	<style>
+		
+	</style>
+</head>
+<body>
+	<div id="app">
+
+		<!-- 父组件通过属性绑定的形式传数据 -->
+		<!-- parentmsg是自己的命名 -->
+		<com1 :parentmsg="msg"></com1>
+		<!-- 还可以传递方法 用事件绑定 -->
+		<!-- func是自己命名 -->
+		<com2 @func="show"></com2>
+	</div>
+
+
+	<template id="tmp2">
+		<div>
+			<h1>子组件</h1>
+			<input type="button" value="子组件按钮" @click="myclick">
+		</div>
+	</template>
+	
+	<script src="lib/vue-2.4.0.js"></script>
+	<script>
+		var com2={
+			template:'#tmp2',
+			data(){
+				return{
+					aug:{id:50,age:60}
+				}
+			},
+			methods : {
+				myclick(){
+					// emit调用 触发
+					// this.$emit('func');
+					// this.$emit('func',参数1，参数2...);
+					this.$emit('func',this.aug);
+				}
+			}
+		}
+		var vm=new Vue({
+			el: '#app',
+			data:{
+				msg:'1234父组件的数据',
+				formSon:''
+			},
+			methods : {
+				show(data){
+					console.log('调用父组件');
+					this.formSon=data;
+				}
+				
+			},
+			components:{
+				com1:{
+					data(){
+						// 子组件自身私有的数据
+						return {}
+					},
+					template:'<h1>这事子组件{{parentmsg}}</h1>',
+					// props中数据都是通过父组件传递给子组件的
+					props:[
+						'parentmsg'
+						//把父组件传入的属性 定义一下
+					]
+				},
+				com2:com2
+			}
+			
+		});
+		
+	</script>
+</body>
+</html>

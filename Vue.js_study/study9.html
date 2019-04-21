@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>路由嵌套</title>
+	<link rel="stylesheet" href="lib/bootstrap-3.3.7.css">
+	<style>
+		.v-enter,.v-leave-to{
+			opacity: 0;
+			transform: translateX(140px);
+		}
+		.v-enter-active,
+    	.v-leave-active {
+			transition: all 0.5s ease;
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<router-link to="/account">account组件</router-link>
+		<router-view></router-view>
+	</div>
+	<template id="tmp1">
+		<div>
+			<h1>account组件a</h1>
+			<router-link to="/account/login">登陆</router-link>
+			<router-link to="/account/register">注册</router-link>
+			<router-view></router-view>
+			
+		</div>
+	</template>
+	<script src="lib/vue-2.4.0.js"></script>
+	<script src="lib/vue-router-3.0.1.js"></script>
+	<script>
+		var account ={
+			template:'#tmp1'
+		}
+
+		var login={
+			template:'<h1>组件Login参数为</h1>',
+		};
+		var register={
+			template:'<h1>组件Register</h1>'
+		};
+		var routerobj= new VueRouter({
+			routes:[
+				{
+					path:'/account',
+					component:account,
+					children:[
+					// 子路由
+						{path:'login',component:login},
+						{path:'register',component:register},
+
+
+					]
+				}
+				// {path:'/account/login',component:login},
+				// {path:'/account/register',component:register}
+				
+			]
+		})
+		var vm=new Vue({
+			el: '#app',
+			data:{ 
+			},
+			methods:{
+			},
+			router:routerobj 
+		});
+		
+	</script>
+</body>
+</html>
